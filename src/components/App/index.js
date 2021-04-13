@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import reactLogo from './react-logo.svg';
 import './styles.css';
 import Test from 'src/components/test';
-import api from '/var/www/html/graine-de-food/src/api';
+import api from '/src/api';
 
 // == Composant
 const App = () => {
