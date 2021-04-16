@@ -6,6 +6,7 @@ import './styles.scss';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import api from 'src/api';
+import Subscribe from 'src/pages/SubscribePage';
 
 // == Composant
 const App = () => {
@@ -24,6 +25,7 @@ useEffect(() => {
   return (
     <div className="app">
       <Header />
+      <Subscribe />
       <Footer />
   </div>
   );
