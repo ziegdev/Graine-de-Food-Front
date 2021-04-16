@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
-import logo from 'src/assets/images/Logo graine de food.png';
 import './styles.scss';
 
 export default class MenuExampleSecondary extends Component {
