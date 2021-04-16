@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer__social, .footer__menu {
+        margin: 0 2rem;
+    }
+}
