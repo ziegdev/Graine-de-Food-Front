@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Homepage from 'src/components/Homepage';
+import Homepage from 'src/pages/HomePage';
 import api from 'src/api';
 
 // == Composant

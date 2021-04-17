@@ -1,0 +1,50 @@
+.homepage__imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  background-image: url('/src/assets/images/IllustrationsHomepage/pexels-alexy-almond-3757999.jpg');
+  margin: 1rem;
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 40%;
+}
+
+.homepage__title {
+  text-transform: uppercase;
+  text-shadow: 4px 2px 8px rgba(10,1,15,0.53);
+  color: white;
+  font-size: 3rem;
+}
+
+.homepage__selling-points {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem auto;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+  width: 80%;
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.actus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+.input__newsletter {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
