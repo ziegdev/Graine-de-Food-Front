@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageIntro from './ImageIntro';
+import SellingPoints from './SellingPoints';
 import { Image, Icon, Button, Container, Header, Input } from 'semantic-ui-react';
 import imgIntro from '/src/assets/images/IllustrationsHomepage/pexels-david-bartus-1166209.jpg';
 import './styles.scss';
@@ -7,24 +8,9 @@ import './styles.scss';
 const Homepage = () => (
   <div className="homepage">
     <ImageIntro />
-    <div className="homepage__selling-points">
-      <div>
-        <Icon name='leaf' size='massive' />
-        <p>Argument de vente</p>
-        <p>Blabla phrase d'acrcroche blabla</p>
-      </div>
-      <div>
-        <Icon name='leaf' size='massive' />
-        <p>Argument de vente</p>
-        <p>Blabla phrase d'acrcroche blabla</p>
-      </div>
-      <div>
-        <Icon name='leaf' size='massive' />
-        <p>Argument de vente</p>
-        <p>Blabla phrase d'acrcroche blabla</p>
-      </div>
+    <div className="centered">
+      <SellingPoints />
     </div>
-    <Button size='massive' color='purple' className="button_calltoaction" fluid>Je m'abonne</Button>
     <div className="presentation">
       <Image src={imgIntro} alt="Image d'introduction" size='medium' className="homepage__imgMelaine" />
       <Container text className="presentation__text">
