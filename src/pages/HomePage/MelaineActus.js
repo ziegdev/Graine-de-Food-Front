@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Icon, Card } from 'semantic-ui-react';
+import { Image, Card } from 'semantic-ui-react';
 import blog1 from 'src/assets/images/IllustrationsHomepage/pexels-victoria-emerson-6160288.jpg';
 import blog2 from 'src/assets/images/IllustrationsHomepage/pexels-grawal-7233716.jpg';
 import blog3 from 'src/assets/images/IllustrationsHomepage/pexels-tima-miroshnichenko-6508773.jpg';

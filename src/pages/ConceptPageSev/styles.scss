@@ -21,17 +21,18 @@
 
 .concept {
   margin-bottom: 5rem;
-}
 
-.concept-container {
+  &-container {
   margin-top: 5rem;
-}
+  }
 
-.concept-image {
+  &-image {
   height: 250px;
   margin: 0 auto;
+  }
 }
 
+// Images alignment
 .align-right {
   margin: 0 0 0 auto;
 }

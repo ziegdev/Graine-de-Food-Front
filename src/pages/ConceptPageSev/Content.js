@@ -4,6 +4,7 @@ import concept1 from '/src/assets/images/IllustrationsConcept/pexels-pixabay-207
 import concept2 from '/src/assets/images/IllustrationsConcept/pexels-gustavo-fring-7447286.jpg';
 import concept3 from '/src/assets/images/IllustrationsConcept/pexels-adonyi-gábor-1407857.jpg';
 import concept4 from '/src/assets/images/IllustrationsConcept/pexels-norma-mortenson-4393655.jpg';
+import './styles.scss';
 
 const Content = () => (
   <div className="concept">
@@ -36,7 +37,7 @@ const Content = () => (
   <section className='concept-container'>
     <Grid>
       <Grid.Column width={10}>
-        <Container text textAlign='right'>
+        <Container text>
           <Header as='h2' >Header</Header>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -88,7 +89,7 @@ const Content = () => (
     <section className='concept-container'>
     <Grid>
       <Grid.Column width={10}>
-        <Container text textAlign='right'>
+        <Container text>
           <Header as='h2' >Header</Header>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo

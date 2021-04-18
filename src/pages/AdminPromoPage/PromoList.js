@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon, Menu, Table } from 'semantic-ui-react'
+import './styles.scss';
 
 const PromoList = () => (
   <Table celled>
