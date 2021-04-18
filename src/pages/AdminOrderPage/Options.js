@@ -8,12 +8,12 @@ const Options = () => (
       <Icon name='filter' />
     </Menu.Item>
 
-    <Menu.Item>
-      <Button color='brown'>Status</Button>
+    <Menu.Item name='status' >
+      Status
     </Menu.Item>
 
-    <Menu.Item>
-      <Button color='brown'>Ville</Button>
+    <Menu.Item name='ville' >
+      Ville
     </Menu.Item>
 
     <Menu.Item>
