@@ -22,7 +22,7 @@ const SellingPoints = () => (
         <p>Je découvre des produits français de qualité</p>
       </div>
     </div>
-    <Button size='huge' color='green' centered>Je m'abonne à la box Graine de Food</Button>
+    <Button size='huge' color='green'>Je m'abonne à la box Graine de Food</Button>
   </>
 );
 

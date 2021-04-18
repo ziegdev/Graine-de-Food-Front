@@ -5,7 +5,7 @@ import './styles.scss';
 
 const MelaineIntro = () => (
   <div className="presentation">
-    <Image src={imgIntro} alt="Image d'introduction" size='medium'/>
+    <Image src={imgIntro} alt="Image d'introduction" size='medium' className='margin-auto' />
     <Container text>
       <Header as='h2'>Un service proposé par Graine de Magie</Header>
       <p>
