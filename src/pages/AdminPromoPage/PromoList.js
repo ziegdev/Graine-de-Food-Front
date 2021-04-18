@@ -21,22 +21,10 @@ const PromoList = () => (
         <Table.Cell>18/04/2021</Table.Cell>
         <Table.Cell>18/04/2022</Table.Cell>
         <Table.Cell>
-          <Icon name='pencil alternate' />
+          <Icon name='pencil alternate' size='large' />
         </Table.Cell>
         <Table.Cell>
-          <Icon name='delete' />
-        </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>SUPERPROMO</Table.Cell>
-        <Table.Cell>10</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>18/04/2022</Table.Cell>
-        <Table.Cell>
-          <Icon name='pencil alternate' />
-        </Table.Cell>
-        <Table.Cell>
-          <Icon name='delete' />
+          <Icon name='delete' size='large' />
         </Table.Cell>
       </Table.Row>
       <Table.Row>
@@ -45,10 +33,22 @@ const PromoList = () => (
         <Table.Cell>18/04/2021</Table.Cell>
         <Table.Cell>18/04/2022</Table.Cell>
         <Table.Cell>
-          <Icon name='pencil alternate' />
+          <Icon name='pencil alternate' size='large' />
         </Table.Cell>
         <Table.Cell>
-          <Icon name='delete' />
+          <Icon name='delete' size='large' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>SUPERPROMO</Table.Cell>
+        <Table.Cell>10</Table.Cell>
+        <Table.Cell>18/04/2021</Table.Cell>
+        <Table.Cell>18/04/2022</Table.Cell>
+        <Table.Cell>
+          <Icon name='pencil alternate' size='large' />
+        </Table.Cell>
+        <Table.Cell>
+          <Icon name='delete' size='large' />
         </Table.Cell>
       </Table.Row>
     </Table.Body>
