@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import AdminOrderPage from 'src/pages/AdminOrderPage';
+import AdminPromoPage from 'src/pages/AdminPromoPage';
 import api from 'src/api';
 
 // == Composant
@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <div className="app">
       <Header />
-      <AdminOrderPage />
+      <AdminPromoPage />
       <Footer />
   </div>
   );
