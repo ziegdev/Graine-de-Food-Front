@@ -1,0 +1,41 @@
+.homepage__imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  background-image: url('/src/assets/images/IllustrationsConcept/pexels-cottonbro-3927238.jpg');
+  margin: 3rem auto;
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 40%;
+}
+
+.homepage__title {
+  text-transform: uppercase;
+  text-shadow: 4px 2px 8px rgba(10,1,15,0.83);
+  color: white;
+  font-size: 3rem;
+}
+
+.concept {
+  margin-bottom: 5rem;
+}
+
+.concept-container {
+  margin-top: 5rem;
+}
+
+.concept-image {
+  height: 250px;
+  margin: 0 auto;
+}
+
+.align-right {
+  margin: 0 0 0 auto;
+}
+
+.align-left {
+  margin: 0 auto 0 0;
+}
