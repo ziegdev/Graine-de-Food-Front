@@ -25,7 +25,6 @@ useEffect(() => {
   return (
     <div className="app">
       <Header />
-
       <Footer />
   </div>
   );
