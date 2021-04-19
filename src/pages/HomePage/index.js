@@ -6,7 +6,7 @@ import MelaineActus from './MelaineActus';
 import { Input } from 'semantic-ui-react';
 import './styles.scss';
 
-const Homepage = () => (
+const HomePage = () => (
   <div>
     <ImageIntro />
     <div className="centered">
@@ -20,4 +20,4 @@ const Homepage = () => (
   </div>
 );
 
-export default Homepage;
+export default HomePage;
