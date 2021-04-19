@@ -10,6 +10,7 @@ import LoginPage from 'src/pages/LoginPage';
 import UserPage from 'src/pages/UserPage';
 import ConceptPage from 'src/pages/ConceptPage';
 import api from 'src/api';
+import Subscribe from 'src/pages/SubscribePage';
 
 // == Composant
 const App = () => {
