@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
+
+.userpage {
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+    &__informations {
+        margin: 0 auto 5rem;
+        padding: 2rem 20rem;
+        border-radius: 10px;
+        box-shadow: 0px 5px 93px -6px rgba(136,135,135,0.52);
+        &__title {
+            font-family: 'DM Serif Text', serif ;
+        }
+        &__input {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            &__content {
+                margin-bottom: 1rem;
+            }
+        }
+        &__checkbox {
+            margin-bottom: 3rem;
+            &__content {
+                
+            }
+        }
+        &__address {
+            &__title{
+                font-family: 'DM Serif Text', serif ;
+            }
+            &__delivery {
+                margin-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                &__input__content {
+                    margin-bottom: 1rem;
+                }
+            }
+            &__invoice {
+                margin-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                &__input__content {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        &__password {
+            margin: 0 auto 5rem;
+            padding: 2rem 20rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 93px -6px rgba(136,135,135,0.52);
+            &__title {
+                font-family: 'DM Serif Text', serif ;
+            }
+            &__input {
+                margin-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                &__content {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        &__subscribe {
+            margin: 0 auto 5rem;
+            padding: 2rem 20rem;
+        }
+        &__deleteCount {
+            margin: 0 auto 5rem;
+            padding: 2rem 20rem;
+        }
+        &__disconnected {
+            margin: 0 auto 5rem;
+            padding: 2rem 20rem;
+        }
+    }
+}
+
+button {
+    background-color: #80003F;
+    color: white;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px ;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
