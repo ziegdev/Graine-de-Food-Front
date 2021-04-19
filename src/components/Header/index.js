@@ -10,7 +10,9 @@ const Header = () => {
    
         <div className="header">
             <div className="header__logo">
-                <img className="header__logo__img" src={logo} alt="logo de Grainedefood"></img>
+                <Link to='/'>
+                <img className="header__logo__img" src={logo} alt="logo de Grainedefood" ></img>
+                </Link>
             </div>
             <HeaderMenu />
         </div>

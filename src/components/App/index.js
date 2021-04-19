@@ -60,7 +60,7 @@ useEffect(() => {
             component={ConceptPageSev}>
           </Route>
       
-        <Route path="/abonnement" >
+        <Route path="/abonnement" exact>
             <Subscribe />
         </Route>
         <Route path="/abonnement/paiement" >

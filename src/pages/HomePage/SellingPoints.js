@@ -1,4 +1,5 @@
 import React from 'react';
+import {   Link } from 'react-router-dom';
 import { Icon, Button } from 'semantic-ui-react';
 import './styles.scss';
 
@@ -22,7 +23,8 @@ const SellingPoints = () => (
         <p>Je découvre des produits français de qualité</p>
       </div>
     </div>
-    <Button size='huge' color='green'>Je m'abonne à la box Graine de Food</Button>
+    <Button size='huge' color='green'as={Link} to='/abonnement'><div className = "aboButton">Je m'abonne à la box Graine de Food</div></Button>
+
   </>
 );
 

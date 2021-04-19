@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, Checkbox } from 'semantic-ui-react';
+import UserModal from '/src/pages/UserPage/UserModal.js';
 
 const UserInformations = () => {
     const handleOnSubmit = (e) => {
@@ -91,7 +92,7 @@ const UserInformations = () => {
                                     />
                             </div>
                         </div>
-                    <button>Enregistrer</button>
+                    <UserModal />
                 </form>
             </div>
         </div>

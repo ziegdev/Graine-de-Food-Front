@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image, Container, Header } from 'semantic-ui-react';
+import {   Link } from 'react-router-dom';
+import { Grid, Image, Container, Header, Button } from 'semantic-ui-react';
 import concept1 from '/src/assets/images/IllustrationsConcept/pexels-pixabay-207247 (1).jpg';
 import concept2 from '/src/assets/images/IllustrationsConcept/pexels-gustavo-fring-7447286.jpg';
 import concept3 from '/src/assets/images/IllustrationsConcept/pexels-adonyi-gábor-1407857.jpg';
@@ -60,6 +61,7 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
+  <Button size='huge' color='green' as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
   <section className='concept-container'>
     <Grid>
       <Grid.Column width={6}>
@@ -112,6 +114,7 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
+  <Button size='huge' color='green'  as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
   </div>
 );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import UserModal from '/src/pages/UserPage/UserModal.js';
 import { Input } from 'semantic-ui-react';
 
 
@@ -38,9 +39,7 @@ const UserPassword = () => {
                                 type="password"
                             />
                         </div>
-                        <button className="userpage__informations__password__button">
-                            Modifier Mot de passe
-                        </button>
+                        <UserModal />
                 </form>
             </div>
         </div>

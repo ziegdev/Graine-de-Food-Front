@@ -1,4 +1,5 @@
 import React from 'react'
+import {   Link } from 'react-router-dom';
 import logo from 'src/assets/images/Logo_grainedefood.png';
 import './styles.scss';
 import { Button } from 'semantic-ui-react'
@@ -12,7 +13,7 @@ const PaymentConfirm = () => (
      <div className="paymentConfirm__logo">
                 <img className="header__logo__img" src={logo} alt="logo de Grainedefood"></img>
     </div>
-    <Button className="paymentConfirm__button" >Retour à la Page d'Accueil</Button>
+    <Button as={Link} to='/'><div>Retour à l'accueil</div></Button>
   </div>
 )
 
