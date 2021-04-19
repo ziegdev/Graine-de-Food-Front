@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
-import logo from 'src/assets/images/Logo graine de food.png';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 import './styles.scss';
 
 export default class MenuExampleSecondary extends Component {
@@ -12,26 +12,34 @@ export default class MenuExampleSecondary extends Component {
     const { activeItem } = this.state
 
     return (
+      <Router>
         <Menu secondary className="header__navbar">
-            <Menu.Item
-            name='Concept'
-            active={activeItem === 'Concept'}
-            onClick={this.handleItemClick}
-            className="header__navbar__menu__link"
-            />
-            <Menu.Item
-            name="Je m'abonne"
-            active={activeItem === "Je m'abonne"}
-            onClick={this.handleItemClick}
-            className="header__navbar__menu__link"
-            />
-            <Menu.Item
-            name='Mon Compte'
-            active={activeItem === 'Mon Compte'}
-            onClick={this.handleItemClick}
-            className="header__navbar__menu__link"
-            />
+            <Link to="/concept">
+              <Menu.Item
+              name='Concept'
+              active={activeItem === 'Concept'}
+              onClick={this.handleItemClick}
+              className="header__navbar__menu__link"
+              />
+            </Link>
+            <Link to="/abonnement">
+              <Menu.Item
+              name="Je m'abonne"
+              active={activeItem === "Je m'abonne"}
+              onClick={this.handleItemClick}
+              className="header__navbar__menu__link"
+              />
+            </Link>
+            <Link to="/mon-compte">
+              <Menu.Item
+              name='Mon Compte'
+              active={activeItem === 'Mon Compte'}
+              onClick={this.handleItemClick}
+              className="header__navbar__menu__link"
+              />
+            </Link>
         </Menu>
+      </Router>
     )
   }
 }

@@ -1,0 +1,15 @@
+.cartpage {
+  width : 60%;
+  margin : auto;
+  padding : 3rem;
+  &__header{
+    text-align: center;
+    margin : 3rem 0;
+  }
+  &__button{
+    align-items: left;
+  }
+}
+.checkboxCGV{
+  margin : 3rem 0;
+}
