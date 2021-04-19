@@ -2,7 +2,8 @@ import React from 'react';
 import { Table } from 'semantic-ui-react'
 import './styles.scss';
 
-const OrdersTable = () => (
+const OrdersTable = ({ usersData }) => {
+  return (
   <Table striped>
     <Table.Header>
       <Table.Row>
@@ -17,119 +18,23 @@ const OrdersTable = () => (
       </Table.Row>
     </Table.Header>
 
+
     <Table.Body>
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-      <Table.Row>
-        <Table.Cell>Actif</Table.Cell>
-        <Table.Cell>Leblanc</Table.Cell>
-        <Table.Cell>Juste</Table.Cell>
-        <Table.Cell>Rue de la Fausse Adresse</Table.Cell>
-        <Table.Cell>12345</Table.Cell>
-        <Table.Cell>Ville</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>3 mois</Table.Cell>
-      </Table.Row>
-      
-    </Table.Body>
+    {usersData.map((user) => (
+    <Table.Row key={user.id}>
+      <Table.Cell>{user.status ? 'Actif' : 'Inactif'}</Table.Cell>
+      <Table.Cell>{user.last_name}</Table.Cell>
+      <Table.Cell>{user.first_name}</Table.Cell>
+      <Table.Cell>{user.delivery_address}</Table.Cell>
+      <Table.Cell>{user.delivery_postcode}</Table.Cell>
+      <Table.Cell>{user.delivery_city}</Table.Cell>
+      <Table.Cell>18/04/2021</Table.Cell>
+      <Table.Cell>3 mois</Table.Cell>
+    </Table.Row>
+    ))}
+       </Table.Body>
   </Table>
-)
+  )
+  }
 
 export default OrdersTable;

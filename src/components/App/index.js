@@ -29,13 +29,6 @@ import api from 'src/api';
 
 // == Composant
 const App = () => {
-useEffect(() => {
-    api.get('/users')
-      .then((users) => console.log('result:', users.data))
-      .finally(() => {
-      });
-
-  },[]);
   return (
     <div className="app">  
       <Header />

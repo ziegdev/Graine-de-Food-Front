@@ -6,23 +6,30 @@ import OrdersTable from './OrdersTable';
 import api from 'src/api';
 
 const AdminOrderPage = () => {
-const [ users, setUsers ] = useState(users)
+const [ usersData, setUsers ] = useState([])
 
-  useEffect(() => {
+  useEffect(() => {  
     api.get('/users')
-      .then((users) => setUsers(users))
-      .finally(() => { 
-      });
+    .then((response) => response.data.users)
+      .then((data) => setUsers(data))
+      .catch((error) => console.error(error))
+      
+  // 
+  //     awa((users) => setUsers(users.results))
+  //     .finally(() => { console.log("state User : ", users)
+  //     });
+    // const result = await api.get('/users')
+    // console.log(result)
+    // setUsers(result.data)
+    // console.log(usersdata)
   },[]);
-
-console.log("state User : ", users.result)
-
-return (
+console.log(usersData)
+  return (
   <div className='container'>
     <AdminMenu />
     <h1>Commandes</h1>
     <Options />
-    <OrdersTable />
+    <OrdersTable usersData={usersData}/>
   </div>
 )};
 
