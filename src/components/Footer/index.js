@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'src/assets/images/Logo graine de food.png';
+import logo from 'src/assets/images/Logo_grainedefood.png';
 import './styles.scss';
 import FooterMenu from './FooterMenu'
 import SocialMenu from './SocialMenu'
