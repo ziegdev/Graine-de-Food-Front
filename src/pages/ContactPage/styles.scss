@@ -1,0 +1,30 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem auto;
+    width: 100%;
+  }
+
+  &__form {
+    width: 40%;
+  }
+
+  &__address {
+    padding: 0 3rem 6rem;
+    font-weight: 600;
+    line-height: 2;
+    width: 40%;
+    font-size: 1.2rem;
+  }
+}
+
