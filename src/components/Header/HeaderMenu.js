@@ -25,7 +25,7 @@ render() {
               type='button' 
               as={NavLink} 
               to='/concept'
-              />
+              >Concept</Menu.Item>
 
            
               <Menu.Item
@@ -35,7 +35,7 @@ render() {
               className="header__navbar__menu__link"
               as={NavLink} 
               to='/abonnement'
-              />
+              >Je m'abonne</Menu.Item>
      
       
               <Menu.Item
@@ -45,7 +45,7 @@ render() {
               className="header__navbar__menu__link"
               as={NavLink} 
               to='/mon-compte'
-              />
+              >Mon Compte </Menu.Item>
 
         </Menu>
 

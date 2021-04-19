@@ -30,16 +30,11 @@ import api from 'src/api';
 // == Composant
 const App = () => {
 useEffect(() => {
-    // window.scrollTo(0, 0);
-    // const { slug } = match.params;
-    api.get('/')
-      .then((result) => console.log('result:', result.data))
+    api.get('/users')
+      .then((users) => console.log('result:', users.data))
       .finally(() => {
       });
-    // return () => {
-    //   setLoadingState(true);
-    //   setRecipeData(null);
-    // };3000
+
   },[]);
   return (
     <div className="app">  
