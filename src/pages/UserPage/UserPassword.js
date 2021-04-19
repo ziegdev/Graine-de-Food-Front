@@ -23,21 +23,18 @@ const UserPassword = () => {
                                 name="ancien_mot_de_passe"
                                 className="userpage__informations__password__input__content"
                                 placeholder='Ancien mot de passe'
-                                value=""
                                 type="password"
                             />
                             <Input
                                 name="nouveau_mot_de_passe"
                                 className="userpage__informations__password__input__content"
                                 placeholder='Nouveau mot de passe'
-                                value=""
                                 type="password"
                             />
                             <Input
                                 name="confirmation_nouveau_mot_de_passe"
                                 className="userpage__informations__password__input__content"
                                 placeholder='Confirmation du nouveau mot de passe'
-                                value=""
                                 type="password"
                             />
                         </div>
