@@ -1,11 +1,16 @@
 // == Import npm
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // == Import
 import './styles.scss';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import LoginPage from 'src/pages/LoginPage';
+import UserPage from 'src/pages/UserPage';
+import ConceptPage from 'src/pages/ConceptPage';
 import api from 'src/api';
+import Subscribe from 'src/pages/SubscribePage';
 
 // == Composant
 const App = () => {
@@ -24,6 +29,19 @@ useEffect(() => {
   return (
     <div className="app">
       <Header />
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+          <Route path="/mon-compte">
+            <UserPage />
+          </Route>
+          <Route path="/concept">
+            <ConceptPage />
+          </Route>
+        </Switch>
+      </Router>
       <Footer />
   </div>
   );
