@@ -1,5 +1,6 @@
 // == Import
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 import { Checkbox, Button, Icon } from 'semantic-ui-react'
 
@@ -15,10 +16,12 @@ const CartPage = () => (
       <DeliveryFormConfirm />
       <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
       <div className="cartpage__button"> 
-        <Button icon labelPosition='right'>
+    <Link to="/abonnement/commande-validee">         
+    <Button icon labelPosition='right'>
         Paiement
         <Icon name='paypal' />
         </Button> 
+</Link>
      </div>
 </div>
   );

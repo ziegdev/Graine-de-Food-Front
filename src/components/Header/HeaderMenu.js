@@ -44,7 +44,7 @@ render() {
               onClick={this.handleItemClick}
               className="header__navbar__menu__link"
               as={NavLink} 
-              to='/mon-compte'
+              to='/login'
               >Mon Compte </Menu.Item>
 
         </Menu>
