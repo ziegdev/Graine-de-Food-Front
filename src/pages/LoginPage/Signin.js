@@ -3,11 +3,11 @@ import {Redirect} from 'react-router-dom';
 import { Input } from 'semantic-ui-react';
 import api from 'src/api';
 
-const Signin = () => {
+const Signin = ({ Login, error }) => {
     
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [userLogged, setUserLogged] = useState(false)
+    const [details, setDetails] = useState({ name: "", email: "", password: ""});
+    //const [password, setPassword] = useState("");
+    //const [userLogged, setUserLogged] = useState(false)
     const [user, setUser] = useState([])
     
     async function tryLogin () {
@@ -16,12 +16,14 @@ const Signin = () => {
         ) 
     }
     
-    const handleOnSubmit = async (e) => {
+    const handleOnSubmit =  (e) => {
         e.preventDefault();
-        const userapi = await tryLogin() 
+        Login(details);
+
+        /*const userapi = await tryLogin() 
           console.log('userapi:', userapi)
           console.log('UserLogged:', userLogged)
-          if(userapi) <Redirect to='/mon-compte' userapi={userapi} />
+          if(userapi) <Redirect to='/mon-compte' userapi={userapi} />*/
     }
 
 
@@ -46,15 +48,15 @@ const Signin = () => {
                         name="signin_email"
                         className="loginpage__signin__input__content"
                         placeholder='Email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}                
+                        value={details.email}
+                        onChange={(e) => setDetails({...details, email: e.target.value})}                
                     />
                     <Input
                         name="signin_password"
                         className="loginpage__signin__input__content"
                         placeholder='Mot de passe' 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        value={details.password}
+                        onChange={(e) => setDetails({...details, password: e.target.value})}
                     />
                 </div>
                     <button
