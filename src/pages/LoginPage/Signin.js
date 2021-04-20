@@ -5,16 +5,17 @@ import api from 'src/api';
 
 const Signin = ({ Login, error }) => {
     
-    const [details, setDetails] = useState({ name: "", email: "", password: ""});
+    const [details, setDetails] = useState({ email: "", password: ""});
     //const [password, setPassword] = useState("");
     //const [userLogged, setUserLogged] = useState(false)
-    const [user, setUser] = useState([])
+    //const [user, setUser] = useState([])
     
-    async function tryLogin () {
-        return (
-            await api.post('/login', {email, password}).then((result) => result.data)
-        ) 
-    }
+    useEffect(() => {
+        const userData = {email, password};
+        api.post('/login', {userData})
+        .then((response) => setDetails(response.data.userData))
+    }, 
+    []);
     
     const handleOnSubmit =  (e) => {
         e.preventDefault();
@@ -43,6 +44,7 @@ const Signin = ({ Login, error }) => {
                     onSubmit={handleOnSubmit}
                     disabled={!validateForm()}
                 >
+                {(error!="") ? ( <div className="errorMessage">{error}</div> ) : ""}
                 <div className="loginpage__signin__input">
                     <Input
                         name="signin_email"
