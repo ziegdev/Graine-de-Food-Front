@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Signin from 'src/pages/LoginPage/Signin';
+import Signin from 'src/containers/Signin';
 import Signup from 'src/pages/LoginPage/Signup';
 import './style.scss';
 
 
-const LoginPage = () => {
+const LoginPage = ({firstname, logged}) => {
+console.log('logged:', logged)
 
   const [user, setUser] = useState({first_name:"", email:"", password:""});
   const [error, setError]= useState("");
@@ -30,14 +31,14 @@ const LoginPage = () => {
     
     return (
         <div className="loginpage">
-          {user.email!= ""} ? (
-            <div className="welcomeMessage">
-            <h2>Welcome, <span>{user.first_name}</span></h2>
+        {logged ? (
+          <div className="welcomeMessage">
+            <h2>Welcome, {firstname}<span>{user.first_name}</span></h2>
             <button onClick={Logout}>Se déconnecter</button>
-            </div>
-          ) : (
+          </div>
+        ) : (
             <Signin />
-            )
+          )}
         </div>
     );
 }

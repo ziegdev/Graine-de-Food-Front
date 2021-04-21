@@ -3,43 +3,16 @@ import React, { useState, useEffect, Component } from 'react';
 import { Input } from 'semantic-ui-react';
 import api from 'src/api';
 
-export default class Signin extends Component {
+const Signin = ({setEmailSignin, setPasswordSignin, submitLogin, resetField, emailSignin, passwordSignin}) => {
     
-    //const [details, setDetails] = useState({ email: "", password: ""});
-    //const [password, setPassword] = useState("");
-    //const [userLogged, setUserLogged] = useState(false)
-    //const [user, setUser] = useState([])
-    
-    /*useEffect(() => {
-        //const userData = { email, password };
-    }, 
-    [])*/
-    
-    handleOnSubmit =  (e) => {
-        e.preventDefault();
-        const data = {
-          email: this.email,
-          password: this.password
-        }
-        api.post('http://localhost:3000/login/', data)
-        .then(response => { console.log(response.data)})
-        .catch(err => {console.log(err)})
-        //Login(details);
-
-        /*const userapi = await tryLogin() 
-          console.log('userapi:', userapi)
-          console.log('UserLogged:', userLogged)
-          if(userapi) <Redirect to='/mon-compte' userapi={userapi} />*/
+   const handleOnSubmit = (e) => {
+       e.preventDefault();
+       submitLogin();
+       resetField();
     }
 
 
-    /*function validateForm() {
-    return email.length > 0 && password.length > 0;
-    }*/
-
-
-    render() {
-      return (
+    return (
         <div className="loginpage">
             <div className="loginpage__signin">
                 <h2 className="loginpage__signin__title">Se connecter</h2>
@@ -47,7 +20,7 @@ export default class Signin extends Component {
                     action="submit"
                     method="get"
                     className="loginpage__signin--form"
-                    onSubmit={this.handleOnSubmit}
+                    onSubmit={(e) => handleOnSubmit(e)}
                     //disabled={!validateForm()}
                 >
                 
@@ -55,14 +28,16 @@ export default class Signin extends Component {
                     <Input
                         name="signin_email"
                         className="loginpage__signin__input__content"
-                        placeholder='Email'
-                        onChange={e => this.email = e.target.value}               
+                            placeholder='Email'
+                            value={emailSignin}
+                        onChange={(e) => setEmailSignin(e.target.value) }               
                     />
                     <Input
                         name="signin_password"
                         className="loginpage__signin__input__content"
                         placeholder='Mot de passe' 
-                        onChange={e => this.password = e.target.value}
+                            value={passwordSignin}
+                        onChange={(e) => setPasswordSignin(e.target.value)}
                     />
                 </div>
                     <button
@@ -77,5 +52,6 @@ export default class Signin extends Component {
             </div>
         </div>
       )
-    }    
-};
+}
+
+export default Signin;
