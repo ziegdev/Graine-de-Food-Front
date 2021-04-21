@@ -36,8 +36,8 @@ const LoginPage = () => {
             <button onClick={Logout}>Se déconnecter</button>
             </div>
           ) : (
-            <Signin Login={Login} /*error={error}*/ />
-            <Signup />)
+            <Signin />
+            )
         </div>
     );
 }

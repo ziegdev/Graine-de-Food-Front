@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 //import {Redirect} from 'react-router-dom';
 import { Input } from 'semantic-ui-react';
 import api from 'src/api';
 
-const Signin = ({ Login, error }) => {
+export default class Signin extends Component {
     
-    const [details, setDetails] = useState({ email: "", password: ""});
+    //const [details, setDetails] = useState({ email: "", password: ""});
     //const [password, setPassword] = useState("");
     //const [userLogged, setUserLogged] = useState(false)
     //const [user, setUser] = useState([])
     
-    useEffect(() => {
+    /*useEffect(() => {
         //const userData = { email, password };
-        api.post('/login', {details})
-        .then((response) => setDetails(response.data.user))
     }, 
-    [])
+    [])*/
     
-    const handleOnSubmit =  (e) => {
+    handleOnSubmit =  (e) => {
         e.preventDefault();
-        Login(details);
+        const data = {
+          email: this.email,
+          password: this.password
+        }
+        api.post('http://localhost:3000/login', data)
+        .then(response => { console.log(response.data)})
+        .catch(err => {console.log(err)})
+        //Login(details);
 
         /*const userapi = await tryLogin() 
           console.log('userapi:', userapi)
@@ -33,7 +38,8 @@ const Signin = ({ Login, error }) => {
     }*/
 
 
-    return (
+    render() {
+      return (
         <div className="loginpage">
             <div className="loginpage__signin">
                 <h2 className="loginpage__signin__title">Se connecter</h2>
@@ -41,24 +47,22 @@ const Signin = ({ Login, error }) => {
                     action="submit"
                     method="get"
                     className="loginpage__signin--form"
-                    onSubmit={handleOnSubmit}
+                    onSubmit={this.handleOnSubmit}
                     //disabled={!validateForm()}
                 >
-                {(error!="") ? ( <div className="errorMessage">{error}</div> ) : ""}
+                
                 <div className="loginpage__signin__input">
                     <Input
                         name="signin_email"
                         className="loginpage__signin__input__content"
                         placeholder='Email'
-                        value={details.email}
-                        onChange={(e) => setDetails({...details, email: e.target.value})}                
+                        onChange={e => this.email = e.target.value}               
                     />
                     <Input
                         name="signin_password"
                         className="loginpage__signin__input__content"
                         placeholder='Mot de passe' 
-                        value={details.password}
-                        onChange={(e) => setDetails({...details, password: e.target.value})}
+                        onChange={e => this.password = e.target.value}
                     />
                 </div>
                     <button
@@ -72,7 +76,8 @@ const Signin = ({ Login, error }) => {
                 </form>
             </div>
         </div>
-    )    
+      )
+    }    
 };
 
-export default Signin;
+
