@@ -21,7 +21,7 @@ export default class Signin extends Component {
           email: this.email,
           password: this.password
         }
-        api.post('http://localhost:3000/login', data)
+        api.post('http://localhost:3000/login/', data)
         .then(response => { console.log(response.data)})
         .catch(err => {console.log(err)})
         //Login(details);
@@ -79,5 +79,3 @@ export default class Signin extends Component {
       )
     }    
 };
-
-
