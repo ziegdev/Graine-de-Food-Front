@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Redirect} from 'react-router-dom';
+//import {Redirect} from 'react-router-dom';
 import { Input } from 'semantic-ui-react';
 import api from 'src/api';
 
@@ -11,11 +11,11 @@ const Signin = ({ Login, error }) => {
     //const [user, setUser] = useState([])
     
     useEffect(() => {
-        const userData = {email, password};
-        api.post('/login', {userData})
-        .then((response) => setDetails(response.data.userData))
+        //const userData = { email, password };
+        api.post('/login', {details})
+        .then((response) => setDetails(response.data.user))
     }, 
-    []);
+    [])
     
     const handleOnSubmit =  (e) => {
         e.preventDefault();
@@ -28,9 +28,9 @@ const Signin = ({ Login, error }) => {
     }
 
 
-    function validateForm() {
+    /*function validateForm() {
     return email.length > 0 && password.length > 0;
-    }
+    }*/
 
 
     return (
@@ -42,7 +42,7 @@ const Signin = ({ Login, error }) => {
                     method="get"
                     className="loginpage__signin--form"
                     onSubmit={handleOnSubmit}
-                    disabled={!validateForm()}
+                    //disabled={!validateForm()}
                 >
                 {(error!="") ? ( <div className="errorMessage">{error}</div> ) : ""}
                 <div className="loginpage__signin__input">
@@ -64,7 +64,7 @@ const Signin = ({ Login, error }) => {
                     <button
                         type="submit"
                         className="loginpage__signin__button"
-                        disabled={!validateForm()}
+                        //disabled={!validateForm()}
                     >
                         Se connecter
                     </button>
