@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
-
 import { Button, Form } from 'semantic-ui-react'
 import './styles.scss';
 import api from 'src/api';
 
 
-const PromoForm = ({ promoCode, promoPourcent, promoStartDate, promoEndDate, setNewPromoCode, setNewPromoPourcent, setNewPromoStartDate, setNewPromoEndDate }) => {
+const PromoFormModify = ({ promoCode, promoPourcent, promoStartDate, promoEndDate, setNewPromoCode, setNewPromoPourcent, setNewPromoStartDate, setNewPromoEndDate }) => {
 
-//const [ newPromo, setNewPromo ] = useState([])
+/*const [ newPromo, setNewPromo ] = useState([])
 
+  useEffect(() => { 
+    setNewPromo(newPromo2)
+  },[]);*/
 
 const handleSubmit = (event) => {  
     event.preventDefault();
-    api.post('/promo', {
+    api.put(`/promo/${promoCode}`, {
       "code": promoCode,
       "pourcent": promoPourcent,
       "start_date": promoStartDate,
@@ -24,7 +26,7 @@ const handleSubmit = (event) => {
     };
 
 /*console.log(promosData)*/
-/*console.log(newPromo)*/
+//console.log("newPromo dans PromoFormModify", newPromo)
 
   return (
     <Form className="promo-form" onSubmit={handleSubmit}>
@@ -53,7 +55,7 @@ const handleSubmit = (event) => {
         <input 
             placeholder='Date de fin' 
            value={promoEndDate}
-          onChange={(e) => setNewPromoEndDate(e.target.value)}             
+          onChange={(e) => setNewPromoEndDate(e.target.value)}                
             />
       </Form.Field>
       <Button type='submit' color='green'>Enregistrer le code promo</Button>
@@ -61,4 +63,4 @@ const handleSubmit = (event) => {
   )
 }
 
-export default PromoForm;
+export default PromoFormModify;

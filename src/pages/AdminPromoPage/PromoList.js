@@ -33,8 +33,8 @@ const PromoList = ({ promosData, searchCodePromo }) => {
         <Table.Cell>{promo.pourcent}</Table.Cell>
         <Table.Cell>{promo.start_date}</Table.Cell>
         <Table.Cell>{promo.end_date}</Table.Cell>
-        <Table.Cell>
-          <Icon name='pencil alternate' size='large' onClick={(e) => searchCodePromo(promo.code, e)} />
+        <Table.Cell> 
+          <Icon name='pencil alternate' size='large' onClick={(e) => {searchCodePromo(promo.code, e)}} />
         </Table.Cell>
         <Table.Cell>
           <Icon name='delete' size='large' onClick={(e) => onDeleteClick(promo.code, e)} />

@@ -7,7 +7,11 @@ import {
 } from 'src/actions/user';
 
 import {
-    SET_CODE_PROMO,
+  SET_NEW_PROMO_CODE,
+  SET_NEW_PROMO_POURCENT,
+  SET_NEW_PROMO_START_DATE,
+  SET_NEW_PROMO_END_DATE,
+  MODIFY_CODE_PROMO,
 } from 'src/actions/admin';
 
 const initialState = {
@@ -22,8 +26,6 @@ const initialState = {
     email: '',
     firstname: '',
     logged: false,
-    //admin - codes promos
-    promoCodeSearched: 'test',
     // code promo detailed
     promoCode: '',
     promoPourcent: '',
@@ -64,10 +66,38 @@ export default (state = initialState, action = {}) => {
                 ...state,                
                 logged: true, 
             }
-        case SET_CODE_PROMO:
+
+        case MODIFY_CODE_PROMO:
             return {
-                ...state,                
-                promoCodeSearched: action.promoCodeSearched,
+              ...state,                
+              promoCode: action.promoCode,
+              promoPourcent: action.promoPourcent,
+              promoStartDate: action.promoStartDate,
+              promoEndDate: action.promoEndDate,
+            }
+
+        case SET_NEW_PROMO_CODE:
+            return {
+              ...state,                
+              promoCode: action.promoCode,
+            }
+
+        case SET_NEW_PROMO_POURCENT:
+            return {
+              ...state,                
+              promoPourcent: action.promoPourcent,
+            }
+
+        case SET_NEW_PROMO_START_DATE:
+            return {
+              ...state,                
+              promoStartDate: action.promoStartDate,
+            }
+
+        case SET_NEW_PROMO_END_DATE:
+            return {
+              ...state,                
+              promoEndDate: action.promoEndDate,
             }
         default:
             return state;

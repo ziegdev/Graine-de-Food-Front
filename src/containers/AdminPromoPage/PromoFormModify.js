@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PromoForm from 'src/pages/AdminPromoPage/PromoForm.js';
+import PromoFormModify from 'src/pages/AdminPromoPage/PromoFormModify.js';
 import {
     setNewPromoCode,
     setNewPromoPourcent,
@@ -10,7 +10,7 @@ import {
 const mapStateToProps = (state) => ({
     promoCode: state.promoCode,
     promoPourcent: state.promoPourcent,
-    promoStartDate: state.promoStartDate,
+    promoStartDate: state.promoStartDate, 
     promoEndDate: state.promoEndDate,
 });
 
@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch) => ({
   setNewPromoEndDate: (element) => dispatch(setNewPromoEndDate(element))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PromoForm);
+export default connect(mapStateToProps, mapDispatchToProps)(PromoFormModify);
