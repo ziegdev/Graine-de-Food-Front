@@ -6,6 +6,10 @@ import {
     LOGGED,
 } from 'src/actions/user';
 
+import {
+    SET_CODE_PROMO,
+} from 'src/actions/admin';
+
 const initialState = {
     //Signin
     emailSignin: '',
@@ -18,6 +22,13 @@ const initialState = {
     email: '',
     firstname: '',
     logged: false,
+    //admin - codes promos
+    promoCodeSearched: 'test',
+    // code promo detailed
+    promoCode: '',
+    promoPourcent: '',
+    promoStartDate: '',
+    promoEndDate: '',
 };
 
 export default (state = initialState, action = {}) => {
@@ -52,6 +63,11 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,                
                 logged: true, 
+            }
+        case SET_CODE_PROMO:
+            return {
+                ...state,                
+                promoCodeSearched: action.promoCodeSearched,
             }
         default:
             return state;
