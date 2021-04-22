@@ -12,7 +12,7 @@ import {
 import './styles.scss';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import LoginPage from 'src/pages/LoginPage';
+import LoginPage from 'src/containers/LoginPage';
 import UserPage from 'src/pages/UserPage';
 import ConceptPageSev from 'src/pages/ConceptPageSev';
 import HomePage from 'src/pages/HomePage';
@@ -82,4 +82,4 @@ const App = () => {
 
 
 // == Export
-export default App;
+  export default App;

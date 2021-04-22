@@ -1,32 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import {Redirect} from 'react-router-dom';
+import React, { useState, useEffect, Component } from 'react';
+//import {Redirect} from 'react-router-dom';
 import { Input } from 'semantic-ui-react';
 import api from 'src/api';
 
-const Signin = () => {
+const Signin = ({setEmailSignin, setPasswordSignin, submitLogin, resetField, emailSignin, passwordSignin}) => {
     
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [userLogged, setUserLogged] = useState(false)
-    const [user, setUser] = useState([])
-    
-    async function tryLogin () {
-        return (
-            await api.post('/login', {email, password}).then((result) => result.data)
-        ) 
-    }
-    
-    const handleOnSubmit = async (e) => {
-        e.preventDefault();
-        const userapi = await tryLogin() 
-          console.log('userapi:', userapi)
-          console.log('UserLogged:', userLogged)
-          if(userapi) <Redirect to='/mon-compte' userapi={userapi} />
-    }
-
-
-    function validateForm() {
-    return email.length > 0 && password.length > 0;
+   const handleOnSubmit = (e) => {
+       e.preventDefault();
+       submitLogin();
+       resetField();
     }
 
 
@@ -38,29 +20,30 @@ const Signin = () => {
                     action="submit"
                     method="get"
                     className="loginpage__signin--form"
-                    onSubmit={handleOnSubmit}
-                    disabled={!validateForm()}
+                    onSubmit={(e) => handleOnSubmit(e)}
+                    //disabled={!validateForm()}
                 >
+                
                 <div className="loginpage__signin__input">
                     <Input
                         name="signin_email"
                         className="loginpage__signin__input__content"
-                        placeholder='Email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}                
+                            placeholder='Email'
+                            value={emailSignin}
+                        onChange={(e) => setEmailSignin(e.target.value) }               
                     />
                     <Input
                         name="signin_password"
                         className="loginpage__signin__input__content"
                         placeholder='Mot de passe' 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                            value={passwordSignin}
+                        onChange={(e) => setPasswordSignin(e.target.value)}
                     />
                 </div>
                     <button
                         type="submit"
                         className="loginpage__signin__button"
-                        disabled={!validateForm()}
+                        //disabled={!validateForm()}
                     >
                         Se connecter
                     </button>
@@ -68,7 +51,7 @@ const Signin = () => {
                 </form>
             </div>
         </div>
-    )    
-};
+      )
+}
 
 export default Signin;
