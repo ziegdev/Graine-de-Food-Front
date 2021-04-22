@@ -8,7 +8,7 @@ import {
 export default (store) => (next) => (action) => {
  switch (action.type) {
      case SUBMIT_LOGIN: {
-         const { emailSignin, passwordSignin } = store.getState();
+         const { emailSignin, passwordSignin } = store.getState().user;
         api.post('/login', {
            email: emailSignin,
            password: passwordSignin,

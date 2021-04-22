@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Signin from 'src/containers/Signin';
-import Signup from 'src/pages/LoginPage/Signup';
+import Signup from 'src/containers/Signup';
 import './style.scss';
 
 
@@ -37,7 +37,10 @@ console.log('logged:', logged)
             <button onClick={Logout}>Se déconnecter</button>
           </div>
         ) : (
-            <Signin />
+            <div className="loginpage">
+              <Signin />
+              <Signup />
+            </div>
           )}
         </div>
     );

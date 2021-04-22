@@ -1,10 +1,12 @@
 import React from 'react';
 import { Input, Checkbox } from 'semantic-ui-react'
+import { resetField } from '../../actions/user';
 
-const Signup = () => {
+const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, setLastnameSignup, setFirstnameSignup, setInvoiceAddressSignup, setInvoicePostCodeSignup, setInvoiceCitySignup, setDeliveryAddressSignup, setDeliveryPostCodeSignup, setDeliveryCitySignup, emailSignup, passwordSignup, passwordConfirmSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, submitSignup, resetField  }) => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        console.log('je soumets le formulaire');
+        submitSignup();
+        resetField();
     }
     return (
         <div className="loginpage__signup">
@@ -20,22 +22,32 @@ const Signup = () => {
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Email' 
+                            value={emailSignup}
+                            onChange={(e) => setEmailSignup(e.target.value)}
                         />
                         <Input 
                             className="loginpage__signup__input__content"
                             placeholder='Mot de Passe' 
+                            value={passwordSignup}
+                            onChange={(e) => setPasswordSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Confirmation de Mot de passe'
+                            value={passwordConfirmSignup}
+                            onChange={(e) => setPasswordConfirmSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Nom'
+                            value={lastnameSignup}
+                            onChange={(e) => setLastnameSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Prénom'
+                            value={firstnameSignup}
+                            onChange={(e) => setFirstnameSignup(e.target.value) }
                         />
                     </div>
             </div>
@@ -45,14 +57,20 @@ const Signup = () => {
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Adresse'
+                            value={invoiceAddressSignup}
+                            onChange={(e) => setInvoiceAddressSignup(e.target.value)}
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Code Postal'
+                            value={invoicePostCodeSignup}
+                            onChange={(e) => setInvoicePostCodeSignup(e.target.value)}
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Ville'
+                            value={invoiceCitySignup}
+                            onChange={(e) => setInvoiceCitySignup(e.target.value)}
                         />
                     </div>
             </div>
@@ -62,14 +80,20 @@ const Signup = () => {
                     <Input
                     className="loginpage__signup__input__content"
                     placeholder='Adresse'
+                    value={deliveryAddressSignup}
+                    onChange={(e) => setDeliveryAddressSignup(e.target.value)}
                     />
                     <Input
                         className="loginpage__signup__input__content"
                         placeholder='Code Postal'
+                        value={deliveryPostCodeSignup}
+                        onChange={(e) => setDeliveryPostCodeSignup(e.target.value)}
                     />
                     <Input
                         className="loginpage__signup__input__content"
                         placeholder='Ville'
+                        value={deliveryCitySignup}
+                        onChange={(e) => setDeliveryCitySignup(e.target.value)}
                     />
                 </div>
             </div>
