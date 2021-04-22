@@ -21,58 +21,58 @@ export const setPasswordConfirmSignup = (passwordConfirm) => ({
 
 export const SET_LASTNAME_SIGNUP = 'SET_LASTNAME_SIGNUP';
 
-export const setLastnameSignup = (last_name) => ({
+export const setLastnameSignup = (lastname) => ({
   type: SET_LASTNAME_SIGNUP,
-  last_name,
+  lastname,
 });
 
 export const SET_FIRSTNAME_SIGNUP = 'SET_FIRSTNAME_SIGNUP';
 
-export const setFirstnameSignup = (first_name) => ({
+export const setFirstnameSignup = (firstname) => ({
   type: SET_FIRSTNAME_SIGNUP,
-  first_name,
+  firstname,
 });
 
 export const SET_INVOICE_ADDRESS_SIGNUP = 'SET_INVOICE_ADDRESS_SIGNUP';
 
-export const setInvoiceAddressSignup = (invoice_address) => ({
+export const setInvoiceAddressSignup = (invoiceAddress) => ({
   type: SET_INVOICE_ADDRESS_SIGNUP,
-  invoice_address,
+  invoiceAddress,
 });
 
 export const SET_INVOICE_POSTCODE_SIGNUP = 'SET_INVOICE_POSTCODE_SIGNUP';
 
-export const setInvoicePostCodeSignup = (invoice_postcode) => ({
+export const setInvoicePostCodeSignup = (invoicePostCode) => ({
   type: SET_INVOICE_POSTCODE_SIGNUP,
-  invoice_postcode,
+  invoicePostCode,
 });
 
 export const SET_INVOICE_CITY_SIGNUP = 'SET_INVOICE_CITY_SIGNUP';
 
-export const setInvoiceCitySignup = (invoice_city) => ({
+export const setInvoiceCitySignup = (invoiceCity) => ({
   type: SET_INVOICE_CITY_SIGNUP,
-  invoice_city,
+  invoiceCity,
 });
 
 export const SET_DELIVERY_ADDRESS_SIGNUP = 'SET_DELIVERY_ADDRESS_SIGNUP';
 
-export const setDeliveryAddressSignup = (delivery_address) => ({
+export const setDeliveryAddressSignup = (deliveryAddress) => ({
   type: SET_DELIVERY_ADDRESS_SIGNUP,
-  delivery_address,
+  deliveryAddress,
 });
 
 export const SET_DELIVERY_POSTCODE_SIGNUP = 'SET_DELIVERY_POSTCODE_SIGNUP';
 
-export const setDeliveryPostCodeSignup = (delivery_postcode) => ({
+export const setDeliveryPostCodeSignup = (deliveryPostCode) => ({
   type: SET_DELIVERY_POSTCODE_SIGNUP,
-  delivery_postcode,
+  deliveryPostCode,
 });
 
 export const SET_DELIVERY_CITY_SIGNUP = 'SET_DELIVERY_CITY_SIGNUP';
 
-export const setDeliveryCitySignup = (delivery_city) => ({
+export const setDeliveryCitySignup = (deliveryCity) => ({
   type: SET_DELIVERY_CITY_SIGNUP,
-  delivery_city,
+  deliveryCity,
 });
 
 export const SUBMIT_SIGNUP = 'SUBMIT_SIGNUP';

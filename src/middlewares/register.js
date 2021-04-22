@@ -11,18 +11,18 @@ import {
 export default (store) => (next) => (action) => {
  switch (action.type) {
      case SUBMIT_SIGNUP: {
-         const { emailSignup, passwordSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup  } = store.getState().user;
+         const { emailSignup, passwordSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup  } = store.getState();
         api.post('/signup', {
            email: emailSignup,
            password: passwordSignup,
-           lastname: lastnameSignup,
-           firstname: firstnameSignup,
-           invoiceAddress: invoiceAddressSignup,
-           invoicePostCode: invoicePostCodeSignup,
-           invoiceCity: invoiceCitySignup,
-           deliveryAddress: deliveryAddressSignup,  
-           deliveryPostCode: deliveryPostCodeSignup,
-           deliveryCity: deliveryCitySignup
+           last_name: lastnameSignup,
+           first_name: firstnameSignup,
+           invoice_address: invoiceAddressSignup,
+           invoice_postcode: invoicePostCodeSignup,
+           invoice_city: invoiceCitySignup,
+           delivery_address: deliveryAddressSignup,  
+           delivery_postcode: deliveryPostCodeSignup,
+           delivery_city: deliveryCitySignup
 
 
         }).catch((err)=> console.log('error: ', err)

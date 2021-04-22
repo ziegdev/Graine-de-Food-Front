@@ -4,8 +4,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom';
+
+import {
+    logged
+} from 'src/actions/user';
 
 
 // == Import
@@ -38,9 +43,15 @@ const App = () => {
             <HomePage />
         </Route>
           <Route path="/login">
-            <LoginPage />
+            <LoginPage /> 
+            {logged ? (
+              <UserPage />) : (
+              <LoginPage/>
+            )}
           </Route>
-          <Route path="/mon-compte">
+          <Route 
+          path="/mon-compte"
+          >
             <UserPage />
           </Route>
           <Route 
