@@ -9,7 +9,7 @@ const PromoList = () => (
         <Table.HeaderCell>Code</Table.HeaderCell>
         <Table.HeaderCell>%</Table.HeaderCell>
         <Table.HeaderCell>Date de début</Table.HeaderCell>
-        <Table.HeaderCell>Date de fin</Table.HeaderCell>
+          <Table.HeaderCell>Date de fin</Table.HeaderCell>
         <Table.HeaderCell>Modifier</Table.HeaderCell>
         <Table.HeaderCell>Supprimer</Table.HeaderCell>
       </Table.Row>

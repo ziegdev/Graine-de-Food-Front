@@ -1,3 +1,5 @@
+import React from 'react';
+import {Redirect} from 'react-router-dom'
 import api from 'src/api'
 import {
     SUBMIT_LOGIN,
@@ -16,7 +18,8 @@ export default (store) => (next) => (action) => {
         )
             .then(result => store.dispatch(setUserFromApi(result.data.user.email, result.data.user.first_name, result.data.user.id)))
             .finally(() => {
-           store.dispatch(logged())
+           store.dispatch(logged()),
+           <Redirect to='/mon-compte' />
        })
  return next(action);
 }

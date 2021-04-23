@@ -35,7 +35,7 @@ export default class FooterMenu extends Component {
           onClick={this.handleItemClick}
         />
       </Menu>
-
+  
     )
   }
 }

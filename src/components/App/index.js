@@ -46,7 +46,7 @@ const App = () => {
             <LoginPage /> 
             {logged ? (
               <UserPage />) : (
-              <LoginPage/>
+              <LoginPage />
             )}
           </Route>
           <Route 
