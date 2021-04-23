@@ -15,8 +15,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   setEmailSignin: (email) => dispatch(setEmailSignin(email)),
-    setPasswordSignin: (password) => dispatch(setPasswordSignin(password)),
-    submitLogin: () => dispatch(submitLogin()),
+  setPasswordSignin: (password) => dispatch(setPasswordSignin(password)),
+  submitLogin: () => dispatch(submitLogin()),
   resetField: ()=> dispatch(resetField())
 });
 

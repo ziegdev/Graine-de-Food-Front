@@ -43,11 +43,7 @@ const App = () => {
             <HomePage />
         </Route>
           <Route path="/login">
-            <LoginPage /> 
-            {logged ? (
-              <UserPage />) : (
-              <LoginPage />
-            )}
+            <LoginPage />
           </Route>
           <Route 
           path="/mon-compte"

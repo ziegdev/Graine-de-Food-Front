@@ -20,6 +20,18 @@ import {
     SET_PASSWORD_CONFIRM_SIGNUP
 } from 'src/actions/register';
 
+import {
+    SET_EMAIL_UPDATE,
+    SET_LASTNAME_UPDATE,
+    SET_FIRSTNAME_UPDATE,
+    SET_INVOICE_ADDRESS_UPDATE,
+    SET_INVOICE_POSTCODE_UPDATE,
+    SET_INVOICE_CITY_UPDATE,
+    SET_DELIVERY_ADDRESS_UPDATE,
+    SET_DELIVERY_POSTCODE_UPDATE,
+    SET_DELIVERY_CITY_UPDATE,
+} from 'src/actions/userUpdate';
+
 const initialState = {
     //Signin
     emailSignin: '',
@@ -38,7 +50,16 @@ const initialState = {
     deliveryCitySignup: '',
     //info user
     email: '',
+    password: '',
+    lastname: '',
     firstname: '',
+    invoiceAddress: '',
+    invoicePostCode: '',
+    invoiceCity: '',
+    deliveryAddress: '',  
+    deliveryPostCode: '',
+    deliveryCity: '',
+    id: '',
     logged: false,
 };
 
@@ -59,7 +80,15 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 email: action.email,
+                password: action.password,
+                lastname: action.lastname,
                 firstname: action.firstname,
+                invoiceAddress: action.invoiceAddress,
+                invoicePostCode: action.invoicePostCode,
+                invoiceCity: action.invoiceCity,
+                deliveryAddress: action.deliveryAddress,  
+                deliveryPostCode: action.deliveryPostCode,
+                deliveryCity: action.deliveryCity,
                 id: action.id,
             }
         // SIGNUP
@@ -149,6 +178,54 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,                
                 logged: true, 
+            }
+
+        // USER UPDATE
+         // SIGNUP
+         case SET_EMAIL_UPDATE:
+            return {
+                ...state,
+                email: action.email,
+            }
+        case SET_LASTNAME_UPDATE:
+            return {
+                ...state,
+                lastname: action.lastname,
+            }
+        case SET_FIRSTNAME_UPDATE:
+            return {
+                ...state,
+                firstname: action.firstname,
+            }
+        case SET_INVOICE_ADDRESS_UPDATE:
+            return {
+                ...state,
+                invoiceAddress: action.invoiceAddress,
+            }
+        case SET_INVOICE_POSTCODE_UPDATE:
+        return {
+            ...state,
+            invoicePostCode: action.invoicePostCode,
+        }
+        case SET_INVOICE_CITY_UPDATE:
+        return {
+            ...state,
+            invoiceCity: action.invoiceCity,
+        }
+        case SET_DELIVERY_ADDRESS_UPDATE:
+            return {
+                ...state,
+                deliveryAddress: action.deliveryAddress,
+            }
+        case SET_DELIVERY_POSTCODE_UPDATE:
+            return {
+                ...state,
+                deliveryPostCode: action.deliveryPostCode,
+            }
+        case SET_DELIVERY_CITY_UPDATE:
+            return {
+                ...state,
+                deliveryCity: action.deliveryCity,
             }
         default:
             return state;

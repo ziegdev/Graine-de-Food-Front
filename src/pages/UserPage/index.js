@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInformations from 'src/pages/UserPage/UserInformations';
+import UserInformations from 'src/containers/UserInformations';
 import UserPassword from 'src/pages/UserPage/UserPassword';
 import SubscribeInformations from 'src/pages/UserPage/SubscribeInformations';
 import DeleteUser from 'src/pages/UserPage/DeleteUser';

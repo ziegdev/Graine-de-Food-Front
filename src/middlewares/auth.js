@@ -14,13 +14,26 @@ export default (store) => (next) => (action) => {
         api.post('/login', {
            email: emailSignin,
            password: passwordSignin,
-        }).catch((err)=> console.log('error: ', err)
-        )
-            .then(result => store.dispatch(setUserFromApi(result.data.user.email, result.data.user.first_name, result.data.user.id)))
-            .finally(() => {
-           store.dispatch(logged()),
-           <Redirect to='/mon-compte' />
-       })
+        }).catch((err)=> alert("Données saisies non reconnues, merci d'essayer à nouveau ou créer un nouveau compte")
+        )            
+            .then(result => store.dispatch(setUserFromApi(
+                result.data.user.email, 
+                result.data.user.password, 
+                result.data.user.last_name, 
+                result.data.user.first_name, 
+                result.data.user.invoice_address,
+                result.data.user.invoice_postcode,
+                result.data.user.invoice_city,
+                result.data.user.delivery_address,
+                result.data.user.delivery_postcode,
+                result.data.user.delivery_city,
+                result.data.user.id,
+                )))
+
+            .then(() => {
+                store.dispatch(logged())
+            })
+
  return next(action);
 }
 default:

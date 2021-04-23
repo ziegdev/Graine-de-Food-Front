@@ -28,15 +28,17 @@ const Signin = ({setEmailSignin, setPasswordSignin, submitLogin, resetField, ema
                     <Input
                         name="signin_email"
                         className="loginpage__signin__input__content"
-                            placeholder='Email'
-                            value={emailSignin}
+                        placeholder='Email'
+                        type="email"
+                        value={emailSignin}
                         onChange={(e) => setEmailSignin(e.target.value) }               
                     />
                     <Input
                         name="signin_password"
                         className="loginpage__signin__input__content"
                         placeholder='Mot de passe' 
-                            value={passwordSignin}
+                        type="password"
+                        value={passwordSignin}
                         onChange={(e) => setPasswordSignin(e.target.value)}
                     />
                 </div>

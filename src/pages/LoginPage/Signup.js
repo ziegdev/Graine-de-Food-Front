@@ -22,30 +22,35 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Email' 
+                            type="email"
                             value={emailSignup}
                             onChange={(e) => setEmailSignup(e.target.value)}
                         />
                         <Input 
                             className="loginpage__signup__input__content"
                             placeholder='Mot de Passe' 
+                            type="password"
                             value={passwordSignup}
                             onChange={(e) => setPasswordSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Confirmation de Mot de passe'
+                            type="password"
                             value={passwordConfirmSignup}
                             onChange={(e) => setPasswordConfirmSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Nom'
+                            type="text"
                             value={lastnameSignup}
                             onChange={(e) => setLastnameSignup(e.target.value) }
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Prénom'
+                            type="text"
                             value={firstnameSignup}
                             onChange={(e) => setFirstnameSignup(e.target.value) }
                         />
@@ -57,18 +62,22 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Adresse'
+                            type="text"
                             value={invoiceAddressSignup}
                             onChange={(e) => setInvoiceAddressSignup(e.target.value)}
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Code Postal'
+                            type="text"
+                            pattern="[0-9]{5}" 
                             value={invoicePostCodeSignup}
                             onChange={(e) => setInvoicePostCodeSignup(e.target.value)}
                         />
                         <Input
                             className="loginpage__signup__input__content"
                             placeholder='Ville'
+                            type="text"
                             value={invoiceCitySignup}
                             onChange={(e) => setInvoiceCitySignup(e.target.value)}
                         />
@@ -80,18 +89,21 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                     <Input
                     className="loginpage__signup__input__content"
                     placeholder='Adresse'
+                    type="text"
                     value={deliveryAddressSignup}
                     onChange={(e) => setDeliveryAddressSignup(e.target.value)}
                     />
                     <Input
                         className="loginpage__signup__input__content"
                         placeholder='Code Postal'
+                        type="number"
                         value={deliveryPostCodeSignup}
                         onChange={(e) => setDeliveryPostCodeSignup(e.target.value)}
                     />
                     <Input
                         className="loginpage__signup__input__content"
                         placeholder='Ville'
+                        type="text"
                         value={deliveryCitySignup}
                         onChange={(e) => setDeliveryCitySignup(e.target.value)}
                     />

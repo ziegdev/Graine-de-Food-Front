@@ -2,9 +2,18 @@ import React from 'react';
 import { Input, Checkbox } from 'semantic-ui-react';
 import UserModal from '/src/pages/UserPage/UserModal.js';
 
-const UserInformations = () => {
+const UserInformations = ({setEmailUpdate, setLastnameUpdate, setFirstnameUpdate, setInvoiceAddressUpdate, setInvoicePostCodeUpdate, setInvoiceCityUpdate, setDeliveryAddressUpdate, setDeliveryPostCodeUpdate, setDeliveryCityUpdate, email,
+lastname,
+firstname,
+invoiceAddress,
+invoicePostCode,
+invoiceCity,
+deliveryAddress,  
+deliveryPostCode,
+deliveryCity, submitUpdate}) => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
+        submitUpdate();
     }
     return (
         <div className="userpage">
@@ -23,19 +32,22 @@ const UserInformations = () => {
                                 name="nom"
                                 className="userpage__informations__input__content"
                                 placeholder='Nom'
-                                value="Simpsons"
+                                value={lastname}
+                                onChange={(e) => {setLastnameUpdate(e.target.value)}}
                             />
                             <Input
                                 name="prenom"
                                 className="userpage__informations__input__content"
                                 placeholder='Prénom'
-                                value="Omer"
+                                value={firstname}
+                                onChange={(e) => setFirstnameUpdate(e.target.value)}
                             />
                             <Input
                                 name="email"
                                 className="userpage__informations__input__content"
                                 placeholder='email'
-                                value="test@test.fr"
+                                value={email}
+                                onChange={(e) => {setEmailUpdate(e.target.value)}}
                             />
                         </div>
                         <div className="userpage__informations__checkbox">
@@ -53,19 +65,22 @@ const UserInformations = () => {
                                     name="adresse"
                                     className="userpage__informations__address__delivery__input__content"
                                     placeholder='Adresse'
-                                    value="5 rue de la République"
+                                    value={deliveryAddress}
+                                    onChange={(e) => {setDeliveryAddressUpdate(e.target.value)}}
                                     />
                                 <Input
                                     name="code_postal"
                                     className="userpage__informations__address__delivery__input__content"
                                     placeholder='Code postal'
-                                    value="75016"
+                                    value={deliveryPostCode}
+                                    onChange={(e) => {setDeliveryPostCodeUpdate(e.target.value)}}
                                     />
                                 <Input
                                     name="ville"
                                     className="userpage__informations__address__delivery__input__content"
                                     placeholder='Ville'
-                                    value="Paris"
+                                    value={deliveryCity}
+                                    onChange={(e) => {setDeliveryCityUpdate(e.target.value)}}
                                     />
                             </div>
                             <h2 className="userpage__informations__address__title">
@@ -76,19 +91,22 @@ const UserInformations = () => {
                                     name="adresse"
                                     className="userpage__informations__address__invoice__input__content"
                                     placeholder='Adresse'
-                                    value="5 rue de la République"
+                                    value={invoiceAddress}
+                                    onChange={(e) => {setInvoiceAddressUpdate(e.target.value)}}
                                     />
                                 <Input
                                     name="code_postal"
                                     className="userpage__informations__address__invoice__input__content"
                                     placeholder='Code postal'
-                                    value="75016"
+                                    value={invoicePostCode}
+                                    onChange={(e) => {setInvoicePostCodeUpdate(e.target.value)}}
                                     />
                                 <Input
                                     name="ville"
                                     className="userpage__informations__address__invoice__input__content"
                                     placeholder='Ville'
-                                    value="Paris"
+                                    value={invoiceCity}
+                                    onChange={(e) => {setInvoiceCityUpdate(e.target.value)}}
                                     />
                             </div>
                         </div>
