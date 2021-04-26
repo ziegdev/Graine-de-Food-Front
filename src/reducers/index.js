@@ -4,6 +4,7 @@ import {
     SET_USER_FROM_API,
     RESET_FIELD,
     LOGGED,
+    LOGOUT,
 } from 'src/actions/user';
 import {
     SET_EMAIL_SIGNUP,
@@ -179,6 +180,13 @@ export default (state = initialState, action = {}) => {
                 ...state,                
                 logged: true, 
             }
+            // DISCONNECT
+        case LOGOUT:
+            return {
+                ...state,                
+                logged: false, 
+            }
+
 
         // USER UPDATE
          // SIGNUP

@@ -47,3 +47,9 @@ export const LOGGED = 'LOGGED';
 export const logged = () => ({
   type: LOGGED,
 });
+
+export const LOGOUT = 'LOGOUT';
+
+export const logout = () => ({
+  type: LOGOUT,
+});
