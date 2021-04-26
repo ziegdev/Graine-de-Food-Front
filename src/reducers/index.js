@@ -154,7 +154,7 @@ export default (state = initialState, action = {}) => {
         case SET_CHECKED_VEGAN:
             return {
                 ...state,
-                vegan: true,
+                vegan: action.vegan,
             }
         case SET_NEW_USER_FROM_API:
             return {

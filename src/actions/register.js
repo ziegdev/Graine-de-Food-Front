@@ -77,8 +77,9 @@ export const setDeliveryCitySignup = (deliveryCity) => ({
 
 export const SET_CHECKED_VEGAN = 'SET_CHECKED_VEGAN';
 
-export const setCheckedVegan = () => ({
+export const setCheckedVegan = (vegan) => ({
   type: SET_CHECKED_VEGAN,
+  vegan,
 });
 
 export const SUBMIT_SIGNUP = 'SUBMIT_SIGNUP';

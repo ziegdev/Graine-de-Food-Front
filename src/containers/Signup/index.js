@@ -47,7 +47,7 @@ const mapDispatchToProps = (dispatch) => ({
     setDeliveryAddressSignup: (deliveryAddress) => dispatch(setDeliveryAddressSignup(deliveryAddress)),
     setDeliveryPostCodeSignup: (deliveryPostCode) => dispatch(setDeliveryPostCodeSignup(deliveryPostCode)),
     setDeliveryCitySignup: (deliveryCity) => dispatch(setDeliveryCitySignup(deliveryCity)),
-    setCheckedVegan:() => dispatch(setCheckedVegan()),
+    setCheckedVegan:(vegan) => dispatch(setCheckedVegan(vegan)),
     submitSignup: () => dispatch(submitSignup()),
     resetField: ()=> dispatch(resetField())
 });
