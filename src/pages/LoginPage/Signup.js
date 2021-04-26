@@ -1,10 +1,18 @@
 import React from 'react';
 import { Input, Checkbox } from 'semantic-ui-react'
-import { resetField } from '../../actions/user';
 
-const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, setLastnameSignup, setFirstnameSignup, setInvoiceAddressSignup, setInvoicePostCodeSignup, setInvoiceCitySignup, setDeliveryAddressSignup, setDeliveryPostCodeSignup, setDeliveryCitySignup, emailSignup, passwordSignup, passwordConfirmSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, submitSignup, resetField  }) => {
+
+
+const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, setLastnameSignup, setFirstnameSignup, setInvoiceAddressSignup, setInvoicePostCodeSignup, setInvoiceCitySignup, setDeliveryAddressSignup, setDeliveryPostCodeSignup, setDeliveryCitySignup, emailSignup, passwordSignup, passwordConfirmSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, submitSignup, resetField, checkedVegan, setCheckedVegan  }) => {
+    const handleCheck= (e) => {  
+       }
+
     const handleOnSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
+        if (Checkbox.checked)
+          {
+            setCheckedVegan()
+          } 
         handleControlOnSubmit();
         submitSignup();
         resetField();
@@ -119,6 +127,8 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                     <Checkbox
                         className="loginpage__options__checkbox__content"
                         label='Vegan'
+                        value={checkedVegan}
+                        onChange= {(e)=> console.log(e)}
                     />
                     <Checkbox
                         className="loginpage__options__checkbox__content"

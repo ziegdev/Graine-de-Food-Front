@@ -13,7 +13,7 @@ import {
 export default (store) => (next) => (action) => {
  switch (action.type) {
      case SUBMIT_SIGNUP: {
-         const { emailSignup, passwordSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup  } = store.getState();
+         const { emailSignup, passwordSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, vegan  } = store.getState();
         api.post('/signup', {
            email: emailSignup,
            password: passwordSignup,
@@ -24,12 +24,11 @@ export default (store) => (next) => (action) => {
            invoice_city: invoiceCitySignup,
            delivery_address: deliveryAddressSignup,  
            delivery_postcode: deliveryPostCodeSignup,
-           delivery_city: deliveryCitySignup
-
-
+           delivery_city: deliveryCitySignup,
+           vegan: vegan,
         }).catch((err)=> console.log('error: ', err)
         )
-            .then(result => store.dispatch(setUserFromApi(result.data.user.email, result.data.user.password, result.data.user.first_name, result.data.user.last_name, result.data.user.invoice_address, result.data.user.invoice_postcode, result.data.user.invoice_city, result.data.user.delivery_address, result.data.user.delivery_postcode, result.data.user.delivery_city, result.data.user.id, result.data.user.status, result.data.user.points, result.data.user.role, result.data.user.vegan, )))
+            .then(result => store.dispatch(setUserFromApi(result.data.user.email, result.data.user.password, result.data.user.first_name, result.data.user.last_name, result.data.user.invoice_address, result.data.user.invoice_postcode, result.data.user.invoice_city, result.data.user.delivery_address, result.data.user.delivery_postcode, result.data.user.delivery_city, result.data.user.vegan, result.data.user.id, result.data.user.status, result.data.user.points, result.data.user.role, )))
             .then(() => {
            store.dispatch(logged())
        })

@@ -12,6 +12,7 @@ import {
     setDeliveryAddressSignup,
     setDeliveryPostCodeSignup,
     setDeliveryCitySignup,
+    setCheckedVegan,
     submitSignup,
 } from 'src/actions/register';
 import {
@@ -30,7 +31,8 @@ const mapStateToProps = (state) => ({
     invoiceCitySignup: state.invoiceCitySignup,
     deliveryAddressSignup: state.deliveryAddressSignup,
     deliveryPostCodeSignup: state.deliveryPostCodeSignup,
-    deliveryCitySignup: state.deliveryCitySignup
+    deliveryCitySignup: state.deliveryCitySignup,
+    checkedVegan: state.vegan
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -45,6 +47,7 @@ const mapDispatchToProps = (dispatch) => ({
     setDeliveryAddressSignup: (deliveryAddress) => dispatch(setDeliveryAddressSignup(deliveryAddress)),
     setDeliveryPostCodeSignup: (deliveryPostCode) => dispatch(setDeliveryPostCodeSignup(deliveryPostCode)),
     setDeliveryCitySignup: (deliveryCity) => dispatch(setDeliveryCitySignup(deliveryCity)),
+    setCheckedVegan:() => dispatch(setCheckedVegan()),
     submitSignup: () => dispatch(submitSignup()),
     resetField: ()=> dispatch(resetField())
 });

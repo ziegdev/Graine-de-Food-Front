@@ -18,7 +18,8 @@ import {
     SET_DELIVERY_POSTCODE_SIGNUP,
     SET_DELIVERY_CITY_SIGNUP,
     SET_NEW_USER_FROM_API,
-    SET_PASSWORD_CONFIRM_SIGNUP
+    SET_PASSWORD_CONFIRM_SIGNUP,
+    SET_CHECKED_VEGAN
 } from 'src/actions/register';
 
 import {
@@ -60,6 +61,7 @@ const initialState = {
     deliveryAddress: '',  
     deliveryPostCode: '',
     deliveryCity: '',
+    vegan: false,
     id: '',
     logged: false,
 };
@@ -90,6 +92,7 @@ export default (state = initialState, action = {}) => {
                 deliveryAddress: action.deliveryAddress,  
                 deliveryPostCode: action.deliveryPostCode,
                 deliveryCity: action.deliveryCity,
+                vegan: action.checkedVegan,
                 id: action.id,
             }
         // SIGNUP
@@ -147,6 +150,11 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 deliveryCitySignup: action.deliveryCity,
+            }
+        case SET_CHECKED_VEGAN:
+            return {
+                ...state,
+                vegan: true,
             }
         case SET_NEW_USER_FROM_API:
             return {

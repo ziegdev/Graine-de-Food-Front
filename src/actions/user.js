@@ -20,7 +20,7 @@ export const submitLogin = () => ({
 
 export const SET_USER_FROM_API = 'SET_USER_FROM_API';
 
-export const setUserFromApi = (email, password, lastname, firstname, invoiceAddress, invoicePostCode, invoiceCity, deliveryAddress, deliveryPostCode, deliveryCity, id) => ({
+export const setUserFromApi = (email, password, lastname, firstname, invoiceAddress, invoicePostCode, invoiceCity, deliveryAddress, deliveryPostCode, deliveryCity, vegan, id) => ({
   type: SET_USER_FROM_API,
     email,
     password,
@@ -32,6 +32,7 @@ export const setUserFromApi = (email, password, lastname, firstname, invoiceAddr
     deliveryAddress,  
     deliveryPostCode,
     deliveryCity,
+    vegan,
     id,
 });
 
