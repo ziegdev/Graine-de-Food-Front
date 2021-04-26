@@ -61,7 +61,7 @@ const initialState = {
     deliveryAddress: '',  
     deliveryPostCode: '',
     deliveryCity: '',
-    vegan: false,
+    vegan: 0,
     id: '',
     logged: false,
 };

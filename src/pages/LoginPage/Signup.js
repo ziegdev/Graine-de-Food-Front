@@ -126,7 +126,6 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                     <Checkbox
                         className="loginpage__options__checkbox__content"
                         label='Vegan'
-                        defaultValue={false}
                         value={checkedVegan}
                         onClick={handleCheck}
                     />
