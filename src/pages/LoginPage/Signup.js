@@ -5,8 +5,13 @@ import { resetField } from '../../actions/user';
 const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, setLastnameSignup, setFirstnameSignup, setInvoiceAddressSignup, setInvoicePostCodeSignup, setInvoiceCitySignup, setDeliveryAddressSignup, setDeliveryPostCodeSignup, setDeliveryCitySignup, emailSignup, passwordSignup, passwordConfirmSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, submitSignup, resetField  }) => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
+        handleControlOnSubmit();
         submitSignup();
         resetField();
+    }
+    const handleControlOnSubmit = () => {
+        if(passwordSignup===setPasswordConfirmSignup){console.log('ok')}
+        else (console.log('erreur de mdp'))  
     }
     return (
         <div className="loginpage__signup">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {  NavLink, Link, withRouter } from 'react-router-dom';
+import {  NavLink, Link, withRouter, useHistory } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import ReactDom from 'react-dom';
 import './styles.scss';
@@ -7,8 +7,13 @@ import './styles.scss';
 
 import LoginPage from '../../pages/LoginPage';
 
-const HeaderMenu = ({ logged }) => {
-  return (
+const HeaderMenu = ({ logged, logout }) => {
+  const history = useHistory();
+  const handleLogout = () => {
+    logout();
+    history.push('/');
+  }
+   return (
  
       <Menu secondary className="header__navbar">
             
@@ -43,9 +48,7 @@ const HeaderMenu = ({ logged }) => {
             name='Déconnexion'
             className="header__navbar__menu__link"
             type='button' 
-            as={NavLink} 
-            to='/'
-            exact
+            onClick={handleLogout}
             >Se déconnecter</Menu.Item>
             </>) : (
             <Menu.Item
