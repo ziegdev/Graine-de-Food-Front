@@ -1,9 +1,11 @@
 import api from 'src/api'
 import {
     SUBMIT_SIGNUP,
-    setNewUserFromApi,
-} from 'src/actions/register';
 
+} from 'src/actions/register';
+import {
+    setUserFromApi,
+} from 'src/actions/user';
 import {
     logged
 } from 'src/actions/user'
@@ -27,7 +29,7 @@ export default (store) => (next) => (action) => {
 
         }).catch((err)=> console.log('error: ', err)
         )
-            .then(result => store.dispatch(setNewUserFromApi(result.data.user.email, result.data.user.password, result.data.user.first_name, result.data.user.last_name, result.data.user.invoice_address, result.data.user.invoice_postcode, result.data.user.invoice_city, result.data.user.delivery_address, result.data.user.delivery_postcode, result.data.user.delivery_city, result.data.user.id, result.data.user.status, result.data.user.points, result.data.user.role, result.data.user.vegan, )))
+            .then(result => store.dispatch(setUserFromApi(result.data.user.email, result.data.user.password, result.data.user.first_name, result.data.user.last_name, result.data.user.invoice_address, result.data.user.invoice_postcode, result.data.user.invoice_city, result.data.user.delivery_address, result.data.user.delivery_postcode, result.data.user.delivery_city, result.data.user.id, result.data.user.status, result.data.user.points, result.data.user.role, result.data.user.vegan, )))
             .then(() => {
            store.dispatch(logged())
        })
