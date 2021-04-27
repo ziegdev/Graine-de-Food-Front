@@ -6,17 +6,31 @@ const CartResume = ({price}) => {
 
 const [promoCode, setPromoCode] = useState('')
 const [pourcent, setPourcent] = useState(0)
+
+
+ const handleOnChange = (e) => {
+  if(e.target.value) {
+    setPromoCode(e.target.value)
+  }else {
+    setPourcent(0)
+    setPromoCode('')
+  }
+}
 const addPromoCode = (e) => {
+
 e.preventDefault();
 api.get(`/promo/${promoCode}`)
     .then((response) => response.data.promo)
       .then((data) => setPourcent(data.pourcent))
-      .catch((error) => console.error(error))
-    };
-
+      .catch((error) => alert("ce code n'existe pas à ou plus"))
+if(!pourcent){
+  setPourcent(0);
+}
+};
 const newPourcent = parseInt(pourcent, 10)
 const newPrice = parseInt(price, 10)
 const finalPrice =(newPrice * ((100-newPourcent)/100)).toFixed(2)
+
 
 
 return(
@@ -41,7 +55,7 @@ return(
         <Table.Cell>J'ai un code promo </Table.Cell>
         <Table.Cell> 
           <Form onSubmit={addPromoCode}>
-            <Input placeholder='Mon Code Promo Ici' value={promoCode} onChange={(e) => setPromoCode(e.target.value)} /> 
+            <Input placeholder='Mon Code Promo Ici' value={promoCode} onChange={handleOnChange} /> 
           </Form>
         </Table.Cell>   
       </Table.Row>
