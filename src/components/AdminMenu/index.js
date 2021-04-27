@@ -20,16 +20,6 @@ const AdminMenu = ({logout}) => {
     <Menu.Item>
       <Button color='green' as={Link} to='/admin/promos'>Codes Promo</Button>
     </Menu.Item>
-
-
-    <Menu.Item>
-      <Button 
-        color='black'
-        onClick={handleLogout}
-        >Se déconnecter
-      </Button>
-    </Menu.Item>
-
   </Menu>
   )
 };
