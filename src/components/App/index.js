@@ -28,7 +28,7 @@ import LegalNotice from 'src/pages/LegalNotice';
 import CGV from 'src/pages/CGV';
 import ContactPage from 'src/pages/ContactPage';
 import AdminOrderPage from 'src/pages/AdminOrderPage';
-import AdminPromoPage from 'src/pages/AdminPromoPage';
+import AdminPromoPage from 'src/containers/AdminPromoPage';
 import api from 'src/api';
 
 
