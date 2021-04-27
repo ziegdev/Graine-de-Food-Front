@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import AdminMenu from 'src/components/AdminMenu';
-import PromoList from 'src/containers/AdminPromoPage/PromoList.js';
-import PromoForm from 'src/containers/AdminPromoPage/PromoForm.js';
-import PromoFormModify from 'src/containers/AdminPromoPage/PromoFormModify.js';
+import PromoList from 'src/pages/AdminPromoPage/PromoList.js';
+import PromoForm from 'src/pages/AdminPromoPage/PromoForm.js';
 import api from 'src/api';
 
-const AdminPromoPage = ({
-  promoCode,
-  promoPourcent,
-  promoStartDate,
-  promoEndDate
-}) => {
+const AdminPromoPage = () => {
 const [ promosData, setPromos ] = useState([])
 
-const promoToModify = {
-  promoCode,
-  promoPourcent,
-  promoStartDate,
-  promoEndDate}
 
   useEffect(() => {  
     api.get('/promos')
@@ -34,8 +23,6 @@ const promoToModify = {
     <PromoList promosData={promosData} />
     <h2>Nouveau code promo</h2>
     <PromoForm />
-    <h2>Modification de code promo</h2>
-    <PromoFormModify newPromo2={promoToModify} />
   </div>)
 };
 
