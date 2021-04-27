@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
-import AdminMenu from 'src/components/AdminMenu';
+
+import AdminMenu from 'src/containers/AdminMenu';
 import PromoList from 'src/pages/AdminPromoPage/PromoList.js';
 import PromoForm from 'src/pages/AdminPromoPage/PromoForm.js';
 import api from 'src/api';
+
 
 const AdminPromoPage = () => {
 const [ promosData, setPromos ] = useState([])

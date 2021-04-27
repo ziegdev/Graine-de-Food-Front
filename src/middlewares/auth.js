@@ -27,6 +27,7 @@ export default (store) => (next) => (action) => {
                 result.data.user.delivery_address,
                 result.data.user.delivery_postcode,
                 result.data.user.delivery_city,
+                result.data.user.role,
                 result.data.user.vegan,
                 result.data.user.id,
                 )))

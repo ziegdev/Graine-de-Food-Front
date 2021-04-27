@@ -7,12 +7,13 @@ import './styles.scss';
 
 import LoginPage from '../../pages/LoginPage';
 
-const HeaderMenu = ({ logged, logout }) => {
+const HeaderMenu = ({ logged, logout, role }) => {
   const history = useHistory();
   const handleLogout = () => {
     logout();
     history.push('/');
   }
+  console.log('State role:' , role);
    return (
  
       <Menu secondary className="header__navbar">
@@ -33,7 +34,15 @@ const HeaderMenu = ({ logged, logout }) => {
             as={NavLink} 
             to='/abonnement'
             >Je m'abonne</Menu.Item>
-  
+            
+            {logged && role==='admin' && (
+            <Menu.Item
+            name="Je m'abonne"
+            className="header__navbar__menu__link"
+            as={NavLink} 
+            to='/admin/orders'
+            >Admin</Menu.Item>
+            )}
             
             {logged ? ( 
               <>

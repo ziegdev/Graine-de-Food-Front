@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
 } from 'react-router-dom';
 
 import {
@@ -33,7 +33,7 @@ import api from 'src/api';
 
 
 // == Composant
-const App = () => {
+const App = ({logged, role}) => {
   return (
     <div className="app">  
       <Header />
@@ -58,12 +58,24 @@ const App = () => {
         <Route path="/abonnement" exact>
             <Subscribe />
         </Route>
+
+        {logged ? (
         <Route path="/abonnement/paiement" >
             <CartPage />
         </Route>
+        ) : (
+          <Redirect to='/login' />
+        )}
+
+        {logged ? (
         <Route path="/abonnement/commande-validee" >
-            <PaymentConfirm />
+          <PaymentConfirm />
         </Route>
+        ) : (
+          <Redirect to='/login' />
+        )}
+
+        
         <Route path="/mentions-legales" >
             <LegalNotice />
         </Route>
@@ -73,12 +85,14 @@ const App = () => {
         <Route path="/contact" >
             <ContactPage />
         </Route>
+        {logged && role==='admin' && (
         <Route path="/admin/orders" >
             <AdminOrderPage />
-        </Route>
+        </Route>)}
+        {logged && role==='admin' && (
         <Route path="/admin/promos" >
             <AdminPromoPage />
-        </Route>
+        </Route>)}
         </Switch>
 
       <Footer />

@@ -69,6 +69,7 @@ const initialState = {
     deliveryAddress: '',  
     deliveryPostCode: '',
     deliveryCity: '',
+    role: '',
     vegan: 0,
     id: '',
     logged: false,
@@ -100,6 +101,7 @@ export default (state = initialState, action = {}) => {
                 deliveryAddress: action.deliveryAddress,  
                 deliveryPostCode: action.deliveryPostCode,
                 deliveryCity: action.deliveryCity,
+                role: action.role,
                 vegan: action.checkedVegan,
                 id: action.id,
             }
