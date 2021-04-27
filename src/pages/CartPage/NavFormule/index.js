@@ -4,6 +4,8 @@ import CartResume from 'src/pages/CartPage/CartResume';
 
 
 
+
+
 const price1=29.99;
 const price2=39.99;
 const price3=49.99;

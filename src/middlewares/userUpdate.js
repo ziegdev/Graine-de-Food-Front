@@ -21,7 +21,6 @@ export default (store) => (next) => (action) => {
            delivery_city: deliveryCity,
         }).catch((err)=> console.log('error: ', err)
         )
-            .then(result => alert("vos nouvelles données ont bien été enregistrées"))
  return next(action);
 }
 default:
