@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
-import { Checkbox, Button, Icon } from 'semantic-ui-react'
+import { Checkbox, Button } from 'semantic-ui-react'
 
-import CartResume from 'src/pages/CartPage/CartResume';
-import DeliveryFormConfirm from 'src/pages/CartPage/DeliveryFormConfirm';
-import NavFormule from 'src/pages/CartPage/NavFormule';
+import CartResume from 'src/containers/CartResume';
+import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
+import NavFormule from 'src/containers/NavFormuleCart';
 
 // == Composant
 const CartPage = () => (
@@ -19,7 +19,6 @@ const CartPage = () => (
     <Link to="/abonnement/commande-validee">         
     <Button icon labelPosition='right'>
         Paiement
-        <Icon name='paypal' />
         </Button> 
 </Link>
      </div>

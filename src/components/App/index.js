@@ -59,6 +59,16 @@ const App = ({logged, role}) => {
             <Subscribe />
         </Route>
 
+        <Route path="/mentions-legales" >
+            <LegalNotice />
+        </Route>
+        <Route path="/cgv" >
+            <CGV />
+        </Route>
+        <Route path="/contact" >
+            <ContactPage />
+        </Route>
+
         {logged ? (
         <Route path="/abonnement/paiement" >
             <CartPage />
@@ -75,16 +85,6 @@ const App = ({logged, role}) => {
           <Redirect to='/login' />
         )}
 
-        
-        <Route path="/mentions-legales" >
-            <LegalNotice />
-        </Route>
-        <Route path="/cgv" >
-            <CGV />
-        </Route>
-        <Route path="/contact" >
-            <ContactPage />
-        </Route>
         {logged && role==='admin' && (
         <Route path="/admin/orders" >
             <AdminOrderPage />
