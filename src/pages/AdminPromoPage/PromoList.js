@@ -1,8 +1,19 @@
 import React from 'react';
-import { Icon, Menu, Table } from 'semantic-ui-react'
+import { Icon, Table } from 'semantic-ui-react'
 import './styles.scss';
+import api from 'src/api';
 
-const PromoList = () => (
+
+const PromoList = ({ promosData, searchCodePromo }) => {
+
+  const onDeleteClick = (promoToDelete) => {
+    api.delete(`/promo/${promoToDelete}`)
+    .then(() => window.location.reload())
+    .catch((error) => console.error(error))
+  }
+
+  return(
+
   <Table celled>
     <Table.Header>
       <Table.Row>
@@ -16,62 +27,26 @@ const PromoList = () => (
     </Table.Header>
 
     <Table.Body>
-      <Table.Row>
-        <Table.Cell>SUPERPROMO</Table.Cell>
-        <Table.Cell>10</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>18/04/2022</Table.Cell>
-        <Table.Cell>
-          <Icon name='pencil alternate' size='large' />
+      {promosData.map((promo) => (
+      <Table.Row key={promo.id}>
+        <Table.Cell>{promo.code}</Table.Cell>
+        <Table.Cell>{promo.pourcent}</Table.Cell>
+        <Table.Cell>{promo.start_date}</Table.Cell>
+        <Table.Cell>{promo.end_date}</Table.Cell>
+        <Table.Cell> 
+          <Icon name='pencil alternate' size='large' onClick={(e) => {searchCodePromo(promo.code, e)}} />
         </Table.Cell>
         <Table.Cell>
-          <Icon name='delete' size='large' />
-        </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>SUPERPROMO</Table.Cell>
-        <Table.Cell>10</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>18/04/2022</Table.Cell>
-        <Table.Cell>
-          <Icon name='pencil alternate' size='large' />
-        </Table.Cell>
-        <Table.Cell>
-          <Icon name='delete' size='large' />
-        </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>SUPERPROMO</Table.Cell>
-        <Table.Cell>10</Table.Cell>
-        <Table.Cell>18/04/2021</Table.Cell>
-        <Table.Cell>18/04/2022</Table.Cell>
-        <Table.Cell>
-          <Icon name='pencil alternate' size='large' />
-        </Table.Cell>
-        <Table.Cell>
-          <Icon name='delete' size='large' />
-        </Table.Cell>
-      </Table.Row>
-    </Table.Body>
+          <Icon name='delete' size='large' onClick={(e) => onDeleteClick(promo.code, e)} />
 
-    <Table.Footer>
-      <Table.Row>
-        <Table.HeaderCell colSpan='6'>
-          <Menu floated='right' pagination>
-            <Menu.Item as='a' icon>
-              <Icon name='chevron left' />
-            </Menu.Item>
-            <Menu.Item as='a'>1</Menu.Item>
-            <Menu.Item as='a'>2</Menu.Item>
-            <Menu.Item as='a'>3</Menu.Item>
-            <Menu.Item as='a' icon>
-              <Icon name='chevron right' />
-            </Menu.Item>
-          </Menu>
-        </Table.HeaderCell>
+        </Table.Cell>
       </Table.Row>
-    </Table.Footer>
+
+      ))}
+      
+    </Table.Body>
   </Table>
 )
+}
 
 export default PromoList;

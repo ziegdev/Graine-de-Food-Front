@@ -34,6 +34,14 @@ import {
     SET_DELIVERY_CITY_UPDATE,
 } from 'src/actions/userUpdate';
 
+import {
+  SET_NEW_PROMO_CODE,
+  SET_NEW_PROMO_POURCENT,
+  SET_NEW_PROMO_START_DATE,
+  SET_NEW_PROMO_END_DATE,
+  MODIFY_CODE_PROMO,
+} from 'src/actions/admin';
+
 const initialState = {
     //Signin
     emailSignin: '',
@@ -64,6 +72,11 @@ const initialState = {
     vegan: 0,
     id: '',
     logged: false,
+    // code promo detailed
+    promoCode: '',
+    promoPourcent: '',
+    promoStartDate: '',
+    promoEndDate: '',
 };
 
 export default (state = initialState, action = {}) => {
