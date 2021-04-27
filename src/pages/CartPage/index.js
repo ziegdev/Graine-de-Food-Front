@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 import { Checkbox, Button, Icon } from 'semantic-ui-react'
 import CartResume from 'src/pages/CartPage/CartResume';
+import ModalPaiement from './ModalPaiement'
 import DeliveryFormConfirm from 'src/pages/CartPage/DeliveryFormConfirm';
 import NavFormule from 'src/pages/CartPage/NavFormule';
 
@@ -22,24 +23,10 @@ const CartPage = () => (
       <DeliveryFormConfirm />
       <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
       <div className="cartpage__button"> 
+
     <Elements stripe={stripePromise}>
-<CardElement
-          options={{
-            style: {
-              base: {
-                fontSize: '16px',
-                color: '#424770',
-                '::placeholder': {
-                  color: '#aab7c4',
-                },
-              },
-              invalid: {
-                color: '#9e2146',
-              },
-            },
-          }}
-        />
-</Elements> 
+      <ModalPaiement/>
+    </Elements>
 
 
     <Link to="/abonnement/commande-validee">         
