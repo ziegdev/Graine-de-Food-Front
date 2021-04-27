@@ -14,21 +14,13 @@ const [ usersData, setUsers ] = useState([])
       .then((data) => setUsers(data))
       .catch((error) => console.error(error))
       
-  // 
-  //     awa((users) => setUsers(users.results))
-  //     .finally(() => { console.log("state User : ", users)
-  //     });
-    // const result = await api.get('/users')
-    // console.log(result)
-    // setUsers(result.data)
-    // console.log(usersdata)
   },[]);
 console.log(usersData)
   return (
   <div className='container'>
     <AdminMenu />
     <h1>Commandes</h1>
-    <Options />
+    <Options usersData={usersData}/>
     <OrdersTable usersData={usersData}/>
   </div>
 )};
