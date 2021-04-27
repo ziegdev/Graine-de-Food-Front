@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import AdminMenu from 'src/components/AdminMenu';
+import AdminMenu from 'src/containers/AdminMenu';
 import PromoList from './PromoList';
 import PromoForm from './PromoForm';
 

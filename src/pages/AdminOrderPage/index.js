@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
-import AdminMenu from 'src/components/AdminMenu';
+import AdminMenu from 'src/containers/AdminMenu';
 import Options from './Options';
 import OrdersTable from './OrdersTable';
 import api from 'src/api';
