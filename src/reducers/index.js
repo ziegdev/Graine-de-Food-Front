@@ -72,11 +72,6 @@ const initialState = {
     vegan: 0,
     id: '',
     logged: false,
-    // code promo detailed
-    promoCode: '',
-    promoPourcent: '',
-    promoStartDate: '',
-    promoEndDate: '',
 };
 
 export default (state = initialState, action = {}) => {
