@@ -13,9 +13,6 @@ const AdminMenu = () => (
       <Button color='green' as={Link} to='/admin/promos'>Codes Promo</Button>
     </Menu.Item>
 
-    <Menu.Item>
-      <Button color='black'>Se déconnecter</Button>
-    </Menu.Item>
   </Menu>
 );
 
