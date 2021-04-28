@@ -31,6 +31,7 @@
   &-image {
   height: 250px;
   margin: 0 auto;
+  
   }
 }
 
@@ -49,7 +50,7 @@ button {
   font-weight: 100;
   border: none;
   border-radius: 5px ;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   margin: 0 auto;
   &:hover {
       background-color: black;
@@ -60,4 +61,3 @@ button {
 .button-link {
   display: flex;
 }
-

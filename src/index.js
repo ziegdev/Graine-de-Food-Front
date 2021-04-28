@@ -22,7 +22,6 @@ const rootReactElement =
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <Router> 
-        <ScrollToTop />
         <App />
       </Router>
     </PersistGate>
