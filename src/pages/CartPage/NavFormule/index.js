@@ -13,7 +13,7 @@ const panes = [
 
 ]
   return(
-  <Tab menu={{ secondary: true, pointing: true }} panes={panes} key={selectedSubMonth} />
+  <Tab menu={{ text: true }} panes={panes} key={selectedSubMonth} />
 )}
 
 export default ForumuleTab;
