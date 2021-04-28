@@ -61,7 +61,7 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
-  <Button size='huge' color='green' as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
+  <a className='button-link' href='/abonnement'><button>Je m'abonne à la box Graine de Food</button></a>
   <section className='concept-container'>
     <Grid>
       <Grid.Column width={6}>
@@ -114,7 +114,7 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
-  <Button size='huge' color='green'  as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
+  <a href='/abonnement'><button>Je m'abonne à la box Graine de Food</button></a>
   </div>
 );
 

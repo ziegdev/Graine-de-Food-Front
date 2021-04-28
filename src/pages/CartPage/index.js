@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
-import { Checkbox, Button } from 'semantic-ui-react'
+import { Checkbox, Button, Form } from 'semantic-ui-react'
 
 import CartResume from 'src/containers/CartResume';
 import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
@@ -14,14 +14,16 @@ const CartPage = () => (
       <h1 className="cartpage__header" >Récapitulatif de Votre Commande </h1>
       <NavFormule />
       <DeliveryFormConfirm />
-      <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
-      <div className="cartpage__button"> 
-    <Link to="/abonnement/commande-validee">         
-    <Button icon labelPosition='right'>
-        Paiement
-        </Button> 
-</Link>
-     </div>
+      <Form>
+        <Form.Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" required/>
+        <div className="cartpage__button"> 
+          <Link to="/abonnement/commande-validee">         
+            <Button icon labelPosition='right' type="submit">
+              Paiement
+            </Button> 
+          </Link>
+        </div>
+      </Form>
 </div>
   );
 

@@ -11,7 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import { render } from 'react-dom';
 import 'semantic-ui-css/semantic.min.css'
-// == Import : local
+// == Import : local 
 // Composants
 import App from 'src/containers/App';
 
@@ -22,6 +22,7 @@ const rootReactElement =
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <Router> 
+        <ScrollToTop />
         <App />
       </Router>
     </PersistGate>

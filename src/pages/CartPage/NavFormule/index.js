@@ -7,12 +7,13 @@ const ForumuleTab = ({selectedSubMonth, selectedSubPrice}) => {
 const panes = [
   {
     menuItem: {selectedSubMonth},
+    key: {selectedSubMonth}, 
     render: (price) => <Tab.Pane attached={false}><CartResume price={selectedSubPrice} /> </Tab.Pane>  
   },
 
 ]
   return(
-  <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+  <Tab menu={{ secondary: true, pointing: true }} panes={panes} key={selectedSubMonth} />
 )}
 
 export default ForumuleTab;
