@@ -42,6 +42,12 @@ import {
   MODIFY_CODE_PROMO,
 } from 'src/actions/admin';
 
+import {
+    SET_SUB_ONE_MONTH,
+    SET_SUB_THREE_MONTH,
+    SET_SUB_SIX_MONTH,
+} from 'src/actions/subscribe';
+
 const initialState = {
     //Signin
     emailSignin: '',
@@ -73,6 +79,9 @@ const initialState = {
     vegan: 0,
     id: '',
     logged: false,
+    //selected subscription
+    selectedSubMonth: '1 mois',
+    selectedSubPrice: '29,99',
 };
 
 export default (state = initialState, action = {}) => {
@@ -252,6 +261,26 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 deliveryCity: action.deliveryCity,
+            }
+            
+        // SELECT SUBSCRIPTION
+        case SET_SUB_ONE_MONTH:
+            return {
+                ...state,
+                selectedSubMonth: '1 mois',
+                selectedSubPrice: '29,99'
+            }
+        case SET_SUB_THREE_MONTH:
+            return {
+                ...state,
+                selectedSubMonth: '3 mois',
+                selectedSubPrice: '49,99'
+            }        
+        case SET_SUB_SIX_MONTH:
+            return {
+                ...state,
+                selectedSubMonth: '6 mois',
+                selectedSubPrice: '69,99'
             }
         default:
             return state;

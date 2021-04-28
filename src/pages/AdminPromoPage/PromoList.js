@@ -14,7 +14,7 @@ const PromoList = ({ promosData, searchCodePromo }) => {
 
   return(
 
-  <Table celled>
+  <Table celled id="promoList">
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Code</Table.HeaderCell>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Segment, Checkbox, Icon } from 'semantic-ui-react'
 import './styles.scss';
 
-const DeliveryFormConfirm = () => (
+const DeliveryFormConfirm = ({lastname, firstname, deliveryAddress, deliveryPostCode, deliveryCity, vegan}) => (
  <div className="deliveryFormConfirm">
   
  <Segment raised>
@@ -12,10 +12,9 @@ const DeliveryFormConfirm = () => (
     <Link to="/mon-compte"> <div> Modifier  <Icon name='pen square' /> </div> </Link>
   </div>
   <div className="deliveryFormConfirm__modifier__adress">
-    <p> Jean-Marc Débutte </p>
-    <p> 5 rue de la République </p>
-    <p>12 344 Paris </p>
-    <Checkbox label='Je suis vegan' />
+    <p> {firstname} {lastname} </p>
+    <p> {deliveryAddress} </p>
+    <p>{deliveryPostCode} {deliveryCity} </p>
   </div>
 </Segment>
 </div>
