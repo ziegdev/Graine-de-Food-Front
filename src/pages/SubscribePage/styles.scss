@@ -20,3 +20,24 @@
   font-size: 2rem;
 }
 
+.subscribe__imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  background-image: url('src/assets/images/terroir.jpg');
+  margin: 3rem auto;
+  height: 400px;
+  background-size: contain;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subscribe__title {
+  text-transform: uppercase;
+  text-shadow: 4px 2px 8px rgba(10,1,15,0.83);
+  color: white;
+  font-size: 3rem;
+}
