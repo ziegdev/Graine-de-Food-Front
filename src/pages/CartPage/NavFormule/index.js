@@ -1,29 +1,18 @@
 import React from 'react'
 import { Tab } from 'semantic-ui-react'
-import CartResume from 'src/pages/CartPage/CartResume';
+import CartResume from 'src/containers/CartResume';
 
-
-
-const price1=29.99;
-const price2=39.99;
-const price3=49.99;
+const ForumuleTab = ({selectedSubMonth, selectedSubPrice}) => {
+  
 const panes = [
   {
-    menuItem: '1 mois',
-    render: (price) => <Tab.Pane attached={false}><CartResume price={price1} /> </Tab.Pane>  
+    menuItem: {selectedSubMonth},
+    render: (price) => <Tab.Pane attached={false}><CartResume price={selectedSubPrice} /> </Tab.Pane>  
   },
-  {
-    menuItem: '3 mois',
-    render: () => <Tab.Pane attached={false}><CartResume price={price2}/> </Tab.Pane>  ,
-  },
-  {
-    menuItem: '6 mois',
-    render: () => <Tab.Pane attached={false}><CartResume price={price3} /> </Tab.Pane>  ,
-  },
-]
 
-const ForumuleTab = () => (
+]
+  return(
   <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
-)
+)}
 
 export default ForumuleTab;
