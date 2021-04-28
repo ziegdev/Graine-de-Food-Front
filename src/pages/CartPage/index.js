@@ -2,26 +2,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
-<<<<<<< HEAD
-import { Checkbox, Button } from 'semantic-ui-react'
-
-import CartResume from 'src/containers/CartResume';
-import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
-import NavFormule from 'src/containers/NavFormuleCart';
-=======
 import { Checkbox, Button, Icon } from 'semantic-ui-react'
-import CartResume from 'src/pages/CartPage/CartResume';
+import CartResume from 'src/containers/CartResume';
 import ModalPaiement from './ModalPaiement'
 import DeliveryFormConfirm from 'src/pages/CartPage/DeliveryFormConfirm';
 import NavFormule from 'src/pages/CartPage/NavFormule';
->>>>>>> 7e41e99442b26eebe2cd65ef7dfd786ae9c3d952
+import Checkout from 'src/pages/CartPage/StripePay';
+import ModalTest from 'src/pages/CartPage/ModalTest';
+import { StripeProvider, Elements, Stripe } from 'react-stripe-elements';
+import pjson from '../../../package.json';
+
 
 // Stripe imports
-import {Elements, CardElement} from '@stripe/react-stripe-js';
+import {CardElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
-const stripePromise = loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE');
+//const stripePromise = loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE');
 
 // == Composant
 const CartPage = () => (
@@ -31,10 +28,11 @@ const CartPage = () => (
       <DeliveryFormConfirm />
       <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
       <div className="cartpage__button"> 
-
-    <Elements stripe={stripePromise}>
-      <ModalPaiement/>
+<StripeProvider apiKey='pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE'>
+    <Elements>
+      <ModalTest />
     </Elements>
+ </StripeProvider>
 
 
     <Link to="/abonnement/commande-validee">         
@@ -46,4 +44,4 @@ const CartPage = () => (
 </div>
   );
 
-export default CartPage
+export default CartPage;

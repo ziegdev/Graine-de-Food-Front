@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { Checkbox, Button, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import './style.scss';
+import './styles.scss';
+import { toast } from "react-toastify";
+import StripeCheckout from "react-stripe-checkout";
+import api from 'src/api';
+import "react-toastify/dist/ReactToastify.css";
+import "./styles.scss";
 import TestPayement from 'src/pages/CartPage/TestPayement';
 
 import {Elements, CardElement, CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
-const stripePromise=loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE');
+toast.configure();
+// const stripePromise=loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE');
 
 /*const customStyles = {
   content : {
@@ -26,7 +32,7 @@ const stripePromise=loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement(document.getElementById('root'))
 
-function ModalPaiement(){
+function ModalTest(){
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {
@@ -41,6 +47,30 @@ function ModalPaiement(){
   function closeModal(){
     setIsOpen(false);
   }
+
+// const [product] = React.useState({
+//     name: "Tesla Roadster",
+//     price: 64998.67,
+//     description: "Cool car"
+//   });
+
+//   async function handleToken(token, addresses) {
+//     const response = await axios.post(
+//       "https://ry7v05l6on.sse.codesandbox.io/checkout",
+//       { token, product }
+//     );
+//     const { status } = response.data;
+//     console.log("Response:", response.data);
+//     if (status === "success") {
+//       toast("Success! Check email for details", { type: "success" });
+//     } else {
+//       toast("Something went wrong", { type: "error" });
+//     }
+//   }
+
+// const handleOnSubmit = (e) => {
+//     e.preventDefault();
+//   }
 
     return (
       <div>
@@ -60,62 +90,21 @@ function ModalPaiement(){
 
          
           <button onClick={closeModal}>close</button>
-            <TestPayement />
-          {/* <form>
-         <CardNumberElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
+          <TestPayement />
+            {/* <div className="product">
+              <h1>{product.name}</h1>
+              <h3>Abonnement Box X mois · €{product.price}</h3>
+            </div>
+        
+          <form onSubmit={handleOnSubmit}>
+      <StripeCheckout
+        //stripeKey="pk_test_4TbuO6qAW2XPuce1Q6ywrGP200NrDZ2233"
+        token={handleToken}
+        amount={product.price * 100}
+        name="Tesla Roadster"
+        billingAddress
+        shippingAddress
       />
-
-             <CardExpiryElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
-      />
-
-            <CardCvcElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
-      />
-            <button type="submit" >
-        Pay
-      </button>
-                 
           </form> */}
 
 
@@ -124,4 +113,4 @@ function ModalPaiement(){
     );
 }
 
-export default ModalPaiement;
+export default ModalTest;
