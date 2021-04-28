@@ -1,12 +1,12 @@
-.subscribe__pic__img {
-  width: 100%;
-  max-height: 26rem;
+.subscribe {
+  margin: 0 auto 5rem;
+  max-width: 60%;
 }
 
 .aboButton {
   display: flex;
-  justify-content: flex-end;
-  
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 
 .pricing {

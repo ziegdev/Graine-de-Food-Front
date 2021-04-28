@@ -2,7 +2,7 @@ import React from 'react'
 
 const ButtonAbonne = () => (
 
-  <a href='/abonnement/paiement'>
+  <a href='/abonnement/paiement' className='aboButton'>
     <button>Je m'abonne</button>
   </a>
 );
