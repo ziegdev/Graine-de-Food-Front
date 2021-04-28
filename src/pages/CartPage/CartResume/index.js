@@ -8,7 +8,8 @@ const [promoCode, setPromoCode] = useState('')
 const [pourcent, setPourcent] = useState(0)
 
 
-const handleOnChange = (e) => {
+
+ const handleOnChange = (e) => {
   if(e.target.value) {
     setPromoCode(e.target.value)
   }else {
@@ -16,7 +17,6 @@ const handleOnChange = (e) => {
     setPromoCode('')
   }
 }
-
 const addPromoCode = (e) => {
 
   e.preventDefault();
@@ -29,10 +29,12 @@ const addPromoCode = (e) => {
   }
   };
 
+
 const newPourcent = parseInt(pourcent, 10)
 const newPrice = parseInt(selectedSubPrice, 10)
 const TVA = Number(((newPrice * 20) / 100).toFixed(2))
 const finalPrice =(newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)
+
 
 
 return(
@@ -56,7 +58,9 @@ return(
       <Table.Row>
         <Table.Cell>J'ai un code promo </Table.Cell>
         <Table.Cell> 
-        <Form onSubmit={addPromoCode}>
+
+          <Form onSubmit={addPromoCode}>
+
             <Input placeholder='Mon Code Promo Ici' value={promoCode} onChange={handleOnChange} /> 
           </Form>
         </Table.Cell>   
