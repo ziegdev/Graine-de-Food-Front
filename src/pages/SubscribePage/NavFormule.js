@@ -14,7 +14,11 @@ const ForumuleTab = ({ setSub1Month, setSub3Month, setSub6Month }) => {
 const panes = [
   {
     menuItem: '1 mois',
+<<<<<<< HEAD
     render: () => <Tab.Pane attached={false}><div className ="text__formule">Je souscris aujourd'hui et je profite dès le mois prochain de ma box ! <br></br>Livraison à domicile au début de chaque mois à compter de la souscription
+=======
+    render: () => <Tab.Pane attached={false} ><div className ="text__formule">Je souscris aujourd'hui et je profite dès le mois prochain de ma box ! <br></br><br></br>Livraison à domicile au début de chaque mois à compter de la souscription
+>>>>>>> 7e41e99442b26eebe2cd65ef7dfd786ae9c3d952
           pour une durée de 1 mois.</div><div className ="pricing">29.99 €</div></Tab.Pane>  
   },
   {
