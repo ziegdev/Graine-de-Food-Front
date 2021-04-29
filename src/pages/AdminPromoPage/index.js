@@ -16,7 +16,7 @@ const [ promosData, setPromos ] = useState([])
     .then((response) => response.data.promos)
       .then((data) => setPromos(data))
       .catch((error) => console.error(error))
-    },[]);
+},[]);
 
   return (<div className='container'>
     <AdminMenu />

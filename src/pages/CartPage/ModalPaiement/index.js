@@ -4,7 +4,9 @@ import Modal from 'react-modal';
 import { Checkbox, Button, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './style.scss';
+
 import TestPayement from 'src/pages/CartPage/TestPayement';
+
 
 import {Elements, CardElement, CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
@@ -57,68 +59,9 @@ function ModalPaiement(){
           contentLabel="Example Modal"
           className="modal_pay"
         >
-
-         
+       
           <button onClick={closeModal}>close</button>
             <TestPayement />
-          {/* <form>
-         <CardNumberElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
-      />
-
-             <CardExpiryElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
-      />
-
-            <CardCvcElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-        }}
-      />
-            <button type="submit" >
-        Pay
-      </button>
-                 
-          </form> */}
-
-
         </Modal>
       </div>
     );

@@ -23,12 +23,15 @@
   margin-bottom: 5rem;
 
   &-container {
+  display: flex;
+  flex-direction: column;
   margin-top: 5rem;
   }
 
   &-image {
   height: 250px;
   margin: 0 auto;
+  
   }
 }
 
@@ -39,4 +42,22 @@
 
 .align-left {
   margin: 0 auto 0 0;
+}
+
+button {
+  background-color: #80003F;
+  color: white;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px ;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  &:hover {
+      background-color: black;
+      color: white;
+  }
+}
+
+.button-link {
+  display: flex;
 }

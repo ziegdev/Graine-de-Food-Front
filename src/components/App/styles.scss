@@ -1,3 +1,17 @@
 .app {
   margin: 3rem;
 }
+
+button {
+  background-color: #80003F;
+  color: white;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px ;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  &:hover {
+      background-color: black;
+      color: white;
+  }
+}

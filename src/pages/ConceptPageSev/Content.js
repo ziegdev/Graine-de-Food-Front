@@ -1,6 +1,6 @@
 import React from 'react';
-import {   Link } from 'react-router-dom';
-import { Grid, Image, Container, Header, Button } from 'semantic-ui-react';
+import { Grid, Image, Container, Header } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 import concept1 from '/src/assets/images/IllustrationsConcept/pexels-pixabay-207247 (1).jpg';
 import concept2 from '/src/assets/images/IllustrationsConcept/pexels-gustavo-fring-7447286.jpg';
 import concept3 from '/src/assets/images/IllustrationsConcept/pexels-adonyi-gábor-1407857.jpg';
@@ -10,7 +10,7 @@ import './styles.scss';
 const Content = () => (
   <div className="concept">
   <section className='concept-container'>
-    <Grid>
+    <Grid verticalAlign='middle'>
       <Grid.Column width={6}>
         <Image src={concept1} className='concept-image align-right' />
       </Grid.Column>
@@ -36,7 +36,7 @@ const Content = () => (
     </Grid>
   </section>
   <section className='concept-container'>
-    <Grid>
+    <Grid verticalAlign='middle'>
       <Grid.Column width={10}>
         <Container text>
           <Header as='h2' >Header</Header>
@@ -61,9 +61,9 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
-  <Button size='huge' color='green' as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
+  <a className='button-link' href='/abonnement'><button>Je m'abonne à la box Graine de Food</button></a>
   <section className='concept-container'>
-    <Grid>
+    <Grid verticalAlign='middle'>
       <Grid.Column width={6}>
         <Image src={concept3} className='concept-image align-right' />
       </Grid.Column>
@@ -89,7 +89,7 @@ const Content = () => (
     </Grid>
     </section>
     <section className='concept-container'>
-    <Grid>
+    <Grid verticalAlign='middle'>
       <Grid.Column width={10}>
         <Container text>
           <Header as='h2' >Header</Header>
@@ -114,7 +114,7 @@ const Content = () => (
       </Grid.Column>
     </Grid>
   </section>
-  <Button size='huge' color='green'  as={Link} to='/abonnement'>Je m'abonne à la box Graine de Food</Button>
+  <Link className='button-link' to='/abonnement'><button>Je m'abonne à la box Graine de Food</button></Link>
   </div>
 );
 

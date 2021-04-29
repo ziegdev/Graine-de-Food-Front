@@ -9,11 +9,9 @@ import './styles.scss';
 const HomePage = () => {  
 const home = useRef(null);
 
-window.addEventListener('load', function()
-	{
-  console.log("chargement de la page")
+useEffect(() => {  
 	window.scrollTo(0,0);
-	}, false);
+},[]);
 
 return(
   <div ref={home}>
