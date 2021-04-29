@@ -6,6 +6,12 @@ import { Form } from 'semantic-ui-react'
 import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
 import NavFormule from 'src/containers/NavFormuleCart';
 
+// Stripe imports
+import {Elements, CardElement} from '@stripe/react-stripe-js';
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+
+
 // == Composant
 const CartPage = () => {
 

@@ -12,6 +12,10 @@ import {
     logged
 } from 'src/actions/user';
 
+// Import Stripe
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
 
 // == Import
 import './styles.scss';

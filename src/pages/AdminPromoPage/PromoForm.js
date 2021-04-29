@@ -9,7 +9,6 @@ const PromoForm = () => {
 
 const [ newPromo, setNewPromo ] = useState([])
 
-
 const handleSubmit = (event) => {  
     event.preventDefault();
     api.post('/promo', newPromo)

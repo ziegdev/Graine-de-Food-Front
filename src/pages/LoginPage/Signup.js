@@ -5,9 +5,8 @@ import { Input, Checkbox } from 'semantic-ui-react'
 
 const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, setLastnameSignup, setFirstnameSignup, setInvoiceAddressSignup, setInvoicePostCodeSignup, setInvoiceCitySignup, setDeliveryAddressSignup, setDeliveryPostCodeSignup, setDeliveryCitySignup, emailSignup, passwordSignup, passwordConfirmSignup, lastnameSignup, firstnameSignup, invoiceAddressSignup, invoicePostCodeSignup, invoiceCitySignup, deliveryAddressSignup, deliveryPostCodeSignup, deliveryCitySignup, submitSignup, resetField, checkedVegan, setCheckedVegan  }) => {
     const handleCheck= (e) => {  
-        const test = e.currentTarget.classList.contains("checked")
-        console.log(!test)
-        setCheckedVegan(!test)
+        const vegan = e.currentTarget.classList.contains("checked")
+        setCheckedVegan(!vegan)
        }
 
     const handleOnSubmit = (e) => {
