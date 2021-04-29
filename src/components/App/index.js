@@ -25,7 +25,7 @@ import LoginPage from 'src/containers/LoginPage';
 import UserPage from 'src/pages/UserPage';
 import ConceptPageSev from 'src/pages/ConceptPageSev';
 import HomePage from 'src/pages/HomePage';
-import Subscribe from 'src/pages/SubscribePage';
+import Subscribe from 'src/containers/SubscribePage';
 import CartPage from 'src/pages/CartPage';
 import PaymentConfirm from 'src/pages/PaymentConfirm';
 import LegalNotice from 'src/pages/LegalNotice';

@@ -1,7 +1,11 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-const ButtonAbonne = () => <button as={Link} to='/abonnement/paiement'><div className = "aboButton">Je m'abonne</div></button>
+const ButtonAbonne = () => (
+
+  <Link to='/abonnement/paiement' className='aboButton'>
+    <button>Je m'abonne</button>
+  </Link>
+);
 
 export default ButtonAbonne;
