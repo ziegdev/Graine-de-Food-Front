@@ -2,8 +2,10 @@ import React from 'react'
 import { Tab } from 'semantic-ui-react'
 import CartResume from 'src/containers/CartResume';
 
+
 const ForumuleTab = ({selectedSubMonth, selectedSubPrice}) => {
   
+
 const panes = [
   {
     menuItem: {selectedSubMonth},

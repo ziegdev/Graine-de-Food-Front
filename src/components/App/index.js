@@ -28,6 +28,7 @@ import HomePage from 'src/pages/HomePage';
 import Subscribe from 'src/containers/SubscribePage';
 import CartPage from 'src/pages/CartPage';
 import PaymentConfirm from 'src/pages/PaymentConfirm';
+import PaymentFail from 'src/pages/PaymentFail';
 import LegalNotice from 'src/pages/LegalNotice';
 import CGV from 'src/pages/CGV';
 import ContactPage from 'src/pages/ContactPage';
@@ -71,6 +72,9 @@ const App = ({logged, role}) => {
         </Route>
         <Route path="/contact" >
             <ContactPage />
+        </Route>
+        <Route path="/abonnement/commande-annulee" >
+            <PaymentFail />
         </Route>
 
         {logged ? (
