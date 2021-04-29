@@ -5,7 +5,7 @@ import { Checkbox, Button, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-import TestPayement from 'src/pages/CartPage/TestPayement';
+import TestPayement from 'src/containers/TestPayement';
 
 
 import {Elements, CardElement, CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement} from '@stripe/react-stripe-js';

@@ -17,26 +17,47 @@ export default (store) => (next) => (action) => {
         }).catch((err)=> alert("Données saisies non reconnues, merci d'essayer à nouveau ou créer un nouveau compte")
         )            
             .then(result =>{
+                console.log(result.data.user);
                 if(result.data.user) {
-                    store.dispatch(setUserFromApi(
-                        result.data.user.email, 
-                        result.data.user.password, 
-                        result.data.user.last_name, 
-                        result.data.user.first_name, 
-                        result.data.user.invoice_address,
-                        result.data.user.invoice_postcode,
-                        result.data.user.invoice_city,
-                        result.data.user.delivery_address,
-                        result.data.user.delivery_postcode,
-                        result.data.user.delivery_city,
-                        result.data.user.role,
-                        result.data.user.vegan,
-                        result.data.user.id,
-            ))} else {
-                alert("Données saisies non reconnues, merci d'essayer à nouveau ou créer un nouveau compte")
-                next()
-            }
-        })
+                    if(result.data.user.orders.length === 0) {
+                        store.dispatch(setUserFromApi(
+                            result.data.user.email, 
+                            result.data.user.password, 
+                            result.data.user.last_name, 
+                            result.data.user.first_name, 
+                            result.data.user.invoice_address,
+                            result.data.user.invoice_postcode,
+                            result.data.user.invoice_city,
+                            result.data.user.delivery_address,
+                            result.data.user.delivery_postcode,
+                            result.data.user.delivery_city,
+                            result.data.user.role,
+                            result.data.user.vegan,
+                            result.data.user.id,
+                        ))} 
+                        else {
+                            store.dispatch(setUserFromApi(
+                                result.data.user.email, 
+                                result.data.user.password, 
+                                result.data.user.last_name, 
+                                result.data.user.first_name, 
+                                result.data.user.invoice_address,
+                                result.data.user.invoice_postcode,
+                                result.data.user.invoice_city,
+                                result.data.user.delivery_address,
+                                result.data.user.delivery_postcode,
+                                result.data.user.delivery_city,
+                                result.data.user.role,
+                                result.data.user.vegan,
+                                result.data.user.id,
+                                result.data.user.orders[0].start_subscribe,
+                                result.data.user.orders[0].end_subscribe  
+                            ))}
+            } else {
+                    alert("Données saisies non reconnues, merci d'essayer à nouveau ou créer un nouveau compte")
+                    next()
+                }
+            })
 
             .then(() => {
                 store.dispatch(logged())

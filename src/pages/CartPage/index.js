@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 import { Checkbox, Button, Icon } from 'semantic-ui-react'
 import CartResume from 'src/containers/CartResume';
-import ModalPaiement from './ModalPaiement'
-import DeliveryFormConfirm from 'src/pages/CartPage/DeliveryFormConfirm';
+import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
 import NavFormule from 'src/pages/CartPage/NavFormule';
 import Checkout from 'src/pages/CartPage/StripePay';
 import ModalTest from 'src/pages/CartPage/ModalTest';

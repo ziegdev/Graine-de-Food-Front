@@ -16,5 +16,11 @@ export const SET_SUB_SIX_MONTH = 'SET_SUB_SIX_MONTH';
 
 export const setSub6Month = () => ({
   type: SET_SUB_SIX_MONTH,
+});
 
+export const SET_FINAL_PRICE= 'SET_FINAL_PRICE';
+
+export const setFinalPrice = (finalPrice) => ({
+  type: SET_FINAL_PRICE,
+  finalPrice
 });

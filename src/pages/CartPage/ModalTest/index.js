@@ -9,7 +9,7 @@ import StripeCheckout from "react-stripe-checkout";
 import api from 'src/api';
 import "react-toastify/dist/ReactToastify.css";
 import "./styles.scss";
-import TestPayement from 'src/pages/CartPage/TestPayement';
+import TestPayement from 'src/containers/TestPayement';
 
 import {Elements, CardElement, CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';

@@ -1,12 +1,21 @@
 import React from 'react';
+import moment from 'moment';
 
-const SubscribeInformations = () => {
+const SubscribeInformations = ({orderStartDate, orderEndDate }) => {
+    moment.locale('fr');
     return (
         <div className="userpage">
             <div className="userpage__informations__subscribe">
                 <h2>Mon Abonnement</h2>
-                <p>Abonnement commencé le : 15 Avril 2021</p>
-                <p>Vous êtes abonné jusqu'au : 15 Mai 2021</p>
+                {orderStartDate ? (
+                    <>
+                    <p>Abonnement commencé le : {moment(orderStartDate).format('LL')}</p>
+                    <p>Vous êtes abonné jusqu'au : {moment(orderEndDate).format('LL')}</p>
+                    </>
+                ) : (
+                    <p> Vous n'êtes pas encore abonné.</p>
+                )} 
+                
             </div>
         </div>
     );

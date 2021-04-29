@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Table, Input, Form} from 'semantic-ui-react'
 import api from 'src/api';
 
-const CartResume = ({price, selectedSubMonth, selectedSubPrice}) => {
+const CartResume = ({setFinalPrice, finalPrice, selectedSubMonth, selectedSubPrice}) => {
 
 const [promoCode, setPromoCode] = useState('')
 const [pourcent, setPourcent] = useState(0)
@@ -33,7 +33,8 @@ const addPromoCode = (e) => {
 const newPourcent = parseInt(pourcent, 10)
 const newPrice = parseInt(selectedSubPrice, 10)
 const TVA = Number(((newPrice * 20) / 100).toFixed(2))
-const finalPrice =(newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)
+//const finalPrice =(newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)
+setFinalPrice(Number((newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)))
 
 
 
