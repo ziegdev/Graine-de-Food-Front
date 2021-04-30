@@ -2,9 +2,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
-import { Form } from 'semantic-ui-react'
+import { Checkbox, Button, Icon } from 'semantic-ui-react'
+import CartResume from 'src/containers/CartResume';
 import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
-import NavFormule from 'src/containers/NavFormuleCart';
+import NavFormule from 'src/pages/CartPage/NavFormule';
+import Checkout from 'src/pages/CartPage/StripePay';
+import ModalTest from 'src/pages/CartPage/ModalTest';
+import { StripeProvider, Elements, Stripe } from 'react-stripe-elements';
+import pjson from '../../../package.json';
+
+
+// Stripe imports
+import {CardElement} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+//const stripePromise = loadStripe('pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE');
 
 // == Composant
 const CartPage = () => {
@@ -15,18 +28,24 @@ const CartPage = () => {
       <a className='button-link' href='/abonnement'><button>Changer de formule</button></a>
       <NavFormule />
       <DeliveryFormConfirm />
-      <Form className="padding-top">
-        <Form.Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" required/>
-        <div className="cartpage__button"> 
-          <Link to="/abonnement/commande-validee">         
-            <button type="submit">
-              Paiement
-            </button> 
-          </Link>
-        </div>
-      </Form>
-    </div>
+      <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
+      <div className="cartpage__button"> 
+<StripeProvider apiKey='pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE'>
+    <Elements>
+      <ModalTest />
+    </Elements>
+ </StripeProvider>
+
+
+    <Link to="/abonnement/commande-validee">         
+    <Button icon labelPosition='right'>
+        Paiement
+        </Button> 
+</Link>
+     </div>
+</div>
+
   );
 }
 
-export default CartPage
+export default CartPage;

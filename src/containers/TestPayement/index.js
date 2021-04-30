@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
-import CartResume from '/src/pages/CartPage/CartResume';
-import {
-setFinalPrice,
-} from 'src/actions/subscribe'
+import TestPayement from '/src/pages/CartPage/TestPayement';
+
 
 const mapStateToProps = (state) => ({
     selectedSubMonth: state.selectedSubMonth,
@@ -11,8 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-setFinalPrice: (finalPrice) => dispatch(setFinalPrice(finalPrice))
 
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartResume);
+export default connect(mapStateToProps, mapDispatchToProps)(TestPayement);

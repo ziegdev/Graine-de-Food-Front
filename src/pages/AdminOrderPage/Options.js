@@ -9,7 +9,7 @@ const data =[]
 usersData.map((user) => ( data.push(user)))
 
 const fileName = 'download'
-const exportType = 'xls'
+const exportType = 'csv'
 
 const exportData = () => {
 

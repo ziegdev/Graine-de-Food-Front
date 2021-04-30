@@ -46,6 +46,9 @@ import {
     SET_SUB_ONE_MONTH,
     SET_SUB_THREE_MONTH,
     SET_SUB_SIX_MONTH,
+    SET_FINAL_PRICE,
+    SET_START_DATE,
+    SET_END_DATE,
 } from 'src/actions/subscribe';
 
 const initialState = {
@@ -78,10 +81,13 @@ const initialState = {
     role: '',
     vegan: 0,
     id: '',
+    orderStartDate: '', 
+    orderEndDate: '',
     logged: false,
     //selected subscription
     selectedSubMonth: '1 mois',
     selectedSubPrice: '29,99',
+    finalPrice: '', 
 };
 
 export default (state = initialState, action = {}) => {
@@ -113,6 +119,8 @@ export default (state = initialState, action = {}) => {
                 role: action.role,
                 vegan: action.checkedVegan,
                 id: action.id,
+                orderStartDate: action.orderStartDate,
+                orderEndDate: action.orderEndDate
             }
         // SIGNUP
         case SET_EMAIL_SIGNUP:
@@ -211,7 +219,34 @@ export default (state = initialState, action = {}) => {
         case LOGOUT:
             return {
                 ...state,                
-                logged: false, 
+                logged: false,
+                emailSignup: '',
+                passwordSignup: '',
+                passwordConfirmSignup: '', 
+                lastnameSignup: '',
+                firstnameSignup: '',
+                invoiceAddressSignup: '',
+                invoicePostCodeSignup: '',
+                invoiceCitySignup: '',
+                deliveryAddressSignup: '',
+                deliveryPostCodeSignup: '',
+                deliveryCitySignup: '',
+                //info user
+                email: '',
+                password: '',
+                lastname: '',
+                firstname: '',
+                invoiceAddress: '',
+                invoicePostCode: '',
+                invoiceCity: '',
+                deliveryAddress: '',  
+                deliveryPostCode: '',
+                deliveryCity: '',
+                role: '',
+                vegan: 0,
+                id: '',
+                orderStartDate: '', 
+                orderEndDate: '', 
             }
 
 
@@ -268,20 +303,35 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 selectedSubMonth: '1 mois',
-                selectedSubPrice: '29,99'
+                selectedSubPrice: '29.99'
             }
         case SET_SUB_THREE_MONTH:
             return {
                 ...state,
                 selectedSubMonth: '3 mois',
-                selectedSubPrice: '49,99'
+                selectedSubPrice: '49.99'
             }        
         case SET_SUB_SIX_MONTH:
             return {
                 ...state,
                 selectedSubMonth: '6 mois',
-                selectedSubPrice: '69,99'
+                selectedSubPrice: '69.99'
             }
+        case SET_FINAL_PRICE:
+        return {
+            ...state,
+            finalPrice: action.finalPrice
+        }
+        case SET_START_DATE:
+        return {
+            ...state,
+            orderStartDate: action.orderStartDate, 
+        }
+        case SET_END_DATE:
+        return {
+            ...state,
+            orderEndDate: action.orderEndDate,
+        }
         default:
             return state;
     }
