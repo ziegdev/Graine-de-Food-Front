@@ -15,12 +15,12 @@ const SellingPoints = () => (
       <div className="centered homepage__selling-points--item">
         <Icon name='box' size='huge' />
         <h3>Je reçois ma box</h3>
-        <p>Directement à la maison<br/>en début de mois</p>
+        <p>directement à la maison<br/>en début de mois</p>
       </div>
       <div className="centered homepage__selling-points--item">
         <Icon name='food' size='huge' />
         <h3>Je déguste</h3>
-        <p>Je découvre des produits français de qualité</p>
+        <p>Je découvre des produits français de qualité </p>
       </div>
     </div>
     <button size='huge' color='green'as={Link} to='/abonnement'><div className = "aboButton">Je m'abonne à la box Graine de Food</div></button>
