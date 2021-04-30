@@ -34,6 +34,8 @@ export default (store) => (next) => (action) => {
                             result.data.user.role,
                             result.data.user.vegan,
                             result.data.user.id,
+                            null,
+                            null
                         ))} 
                         else {
                             store.dispatch(setUserFromApi(
@@ -52,7 +54,8 @@ export default (store) => (next) => (action) => {
                                 result.data.user.id,
                                 result.data.user.orders[0].start_subscribe,
                                 result.data.user.orders[0].end_subscribe  
-                            ))}
+                            ))
+                        }
             } else {
                     alert("Données saisies non reconnues, merci d'essayer à nouveau ou créer un nouveau compte")
                     next()

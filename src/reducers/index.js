@@ -47,6 +47,8 @@ import {
     SET_SUB_THREE_MONTH,
     SET_SUB_SIX_MONTH,
     SET_FINAL_PRICE,
+    SET_START_DATE,
+    SET_END_DATE,
 } from 'src/actions/subscribe';
 
 const initialState = {
@@ -217,7 +219,34 @@ export default (state = initialState, action = {}) => {
         case LOGOUT:
             return {
                 ...state,                
-                logged: false, 
+                logged: false,
+                emailSignup: '',
+                passwordSignup: '',
+                passwordConfirmSignup: '', 
+                lastnameSignup: '',
+                firstnameSignup: '',
+                invoiceAddressSignup: '',
+                invoicePostCodeSignup: '',
+                invoiceCitySignup: '',
+                deliveryAddressSignup: '',
+                deliveryPostCodeSignup: '',
+                deliveryCitySignup: '',
+                //info user
+                email: '',
+                password: '',
+                lastname: '',
+                firstname: '',
+                invoiceAddress: '',
+                invoicePostCode: '',
+                invoiceCity: '',
+                deliveryAddress: '',  
+                deliveryPostCode: '',
+                deliveryCity: '',
+                role: '',
+                vegan: 0,
+                id: '',
+                orderStartDate: '', 
+                orderEndDate: '', 
             }
 
 
@@ -292,6 +321,16 @@ export default (state = initialState, action = {}) => {
         return {
             ...state,
             finalPrice: action.finalPrice
+        }
+        case SET_START_DATE:
+        return {
+            ...state,
+            orderStartDate: action.orderStartDate, 
+        }
+        case SET_END_DATE:
+        return {
+            ...state,
+            orderEndDate: action.orderEndDate,
         }
         default:
             return state;

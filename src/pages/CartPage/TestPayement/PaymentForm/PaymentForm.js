@@ -27,7 +27,7 @@ const CARD_OPTIONS = {
 	}
 }
 
-export default function PaymentForm({userId, finalPrice, selectedSubMonth}) {
+export default function PaymentForm({userId, finalPrice, selectedSubMonth, email, password, lastname, firstname, invoiceAddress, invoicePostCode, invoiceCity, deliveryAddress, deliveryPostCode, deliveryCity, role, setStartDate, setEndDate }) {
     const [success, setSuccess ] = useState(false)
     const history = useHistory();
     const stripe = useStripe()
@@ -74,7 +74,27 @@ export default function PaymentForm({userId, finalPrice, selectedSubMonth}) {
                     "user_id": userId,
                 });
 
-                history.push("/abonnement/commande-validee")
+                const addPoint = await api.put(`/user/${userId}`, {
+                    "id": userId,
+                    "email": email,
+                    "password": password,
+                    "last_name": lastname,
+                    "first_name": firstname,
+                    "delivery_address": deliveryAddress,
+                    "invoice_address": invoiceAddress,
+                    "delivery_postcode": deliveryPostCode,
+                    "invoice_postcode": invoicePostCode,
+                    "delivery_city": deliveryCity,
+                    "invoice_city": invoiceCity,
+                    "status": true,
+                    "points": point,
+                    "role": role,
+                })
+
+                setStartDate(startDate)
+                setEndDate(endDate)
+
+                if(addPoint) history.push("/abonnement/commande-validee")
 
             }
 

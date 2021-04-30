@@ -1,7 +1,8 @@
-import React from 'react';
+import React , {useEffect}from 'react';
 import moment from 'moment';
+import api from 'src/api'
 
-const SubscribeInformations = ({orderStartDate, orderEndDate }) => {
+const SubscribeInformations = ({orderStartDate, orderEndDate}) => {
     moment.locale('fr');
     return (
         <div className="userpage">
