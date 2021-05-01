@@ -8,8 +8,13 @@
     &__informations {
         margin: 0 auto 5rem;
         padding: 2rem 20rem;
-        border-radius: 10px;
+        border-radius: 20px;
         box-shadow: 0px 5px 93px -6px rgba(136,135,135,0.52);
+        &--form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         &__title {
             font-family: 'DM Serif Text', serif ;
         }
@@ -50,8 +55,8 @@
         }
         &__password {
             margin: 0 auto 5rem;
-            padding: 2rem 20rem;
-            border-radius: 10px;
+            padding: 2rem 24.5rem;
+            border-radius: 20px;
             box-shadow: 0px 5px 93px -6px rgba(136,135,135,0.52);
             &__title {
                 font-family: 'DM Serif Text', serif ;
@@ -66,12 +71,27 @@
             }
         }
         &__subscribe {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             margin: 0 auto 5rem;
             padding: 2rem 20rem;
+            h2 {
+                margin-bottom: 2rem;
+            }
         }
         &__deleteCount {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             margin: 0 auto 5rem;
             padding: 2rem 20rem;
+            h2 {
+                margin-bottom: 2rem;
+            }
+            &button {
+            margin: 0 auto 5rem;
+            }
         }
         &__disconnected {
             margin: 0 auto 5rem;
