@@ -115,7 +115,7 @@ export default function PaymentForm({userId, finalPrice, selectedSubMonth, email
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button onSubmit={handleSubmit}>Pay</button>
+            <button onSubmit={handleSubmit}>Payer</button>
         </form>     
         </>
     )
