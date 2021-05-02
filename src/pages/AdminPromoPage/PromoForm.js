@@ -39,16 +39,18 @@ console.log(newPromo)
       <Form.Field>
         <input 
           placeholder='Date de début' 
+          type='date'
           value={newPromo.start_date}
           onChange={(e) => setNewPromo({...newPromo, "start_date": e.target.value})} 
           />
       </Form.Field>
       <Form.Field>
         <input 
-            placeholder='Date de fin' 
-           value={newPromo.end_date}
+          placeholder='Date de fin' 
+          type='date'
+          value={newPromo.end_date}
           onChange={(e) => setNewPromo({...newPromo, "end_date": e.target.value})}            
-            />
+          />
       </Form.Field>
       <Button type='submit' color='green'>Enregistrer le code promo</Button>
     </Form>
