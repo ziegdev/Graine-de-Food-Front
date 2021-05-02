@@ -18,12 +18,10 @@ exportFromJSON({ data, fileName, exportType })
 }
 
 return (
-  <Menu className='orders-menu'>
-    <Menu.Item>
+  <div>
       <Icon name='external alternate' size='large' />
       <Button color='red' onClick={exportData}>Exporter les données</Button>
-    </Menu.Item>
-  </Menu>
+  </div>
 );
 }
 
