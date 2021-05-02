@@ -30,9 +30,13 @@
   }
 
   &-image {
-  height: 250px;
+  width: 80%;
   margin: 0 auto;
-  
+  }
+
+  &-image--mobile {
+  width: 50%;
+  margin: 0 auto;
   }
 }
 
@@ -52,7 +56,7 @@ button {
   border: none;
   border-radius: 5px ;
   padding: 0.5rem 1rem;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   &:hover {
       background-color: black;
       color: white;
@@ -61,6 +65,14 @@ button {
 
 .button-link {
   display: flex;
+}
+
+//Responsive Design
+
+@media (max-width: 1180px) {
+  .concept__title {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 980px) {
@@ -80,4 +92,23 @@ button {
   .concept__imageContainer {
       padding: 0 5rem;
   }
+}
+
+@media only screen and (max-width: 1199px){
+  .ui.container {
+      width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .ui.grid {
+    display: flex;
+    flex-direction: column-reverse
+  }
+}
+
+@media only screen and (orientation : portrait) and (max-width: 1024px){
+.concept__imageContainer {
+    background-position: bottom;
+}
 }
