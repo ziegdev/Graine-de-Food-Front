@@ -1,3 +1,5 @@
+// Top image of the homepage
+
 .homepage__imageContainer {
   display: flex;
   flex-direction: column;
@@ -48,6 +50,8 @@
   }
 }
 
+// Presentation of the client
+
 .presentation {
   display: flex;
   justify-content: center;
@@ -64,6 +68,21 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 3rem auto;
+}
+
+// Semantic UI card styling
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+    height: 362px;
+    object-fit: cover;
+}
+
+.ui.card {
+    margin: 0;
+}
+
+.header {
+  padding: 1rem 2rem;
 }
 
 .input__newsletter {
@@ -108,6 +127,12 @@
     background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
+  }
+  .actus {
+    flex-direction: column;
+  }
+  .ui.card {
+      margin: 0 auto 2rem;
   }
 }
 
