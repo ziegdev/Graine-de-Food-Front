@@ -10,6 +10,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 40%;
+  padding: 0;
 }
 
 .homepage__title {
@@ -73,9 +74,56 @@
 
 /*RESPONSIVE HOMEPAGE*/
 
+@media (max-width: 1350px) {
+  .homepage__imageContainer {
+    padding: 0 17.6rem;
+  }
+}
+
+@media (max-width: 1222px) {
+  .homepage__imageContainer {
+    padding: 0 13rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  .homepage__imageContainer {
+    padding: 0 8.3rem;
+  }
+}
+
 @media (max-width: 1030px) {
   .homepage__selling-points {
     width: 100%;
+  }
+  .homepage__imageContainer {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 960px) {
+  .homepage__imageContainer {
+    padding: 0 3.6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .homepage__imageContainer {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .homepage__title {
+      font-size: 2.2rem;
+      padding: 0 5rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .homepage__imageContainer {
+    padding: 0 7.6rem;
   }
 }
 
@@ -86,6 +134,18 @@
   }
   .homepage__selling-points {
       margin: 3rem auto 0;
+  }
+}
+
+@media (max-width: 555px) {
+  .homepage__title {
+      font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .homepage__title {
+      font-size: 1.7rem;
   }
 }
 
