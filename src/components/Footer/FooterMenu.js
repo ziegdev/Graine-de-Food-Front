@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { Menu, Image, List} from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 
 export default class FooterMenu extends Component {
   state = { activeItem: 'home' }
