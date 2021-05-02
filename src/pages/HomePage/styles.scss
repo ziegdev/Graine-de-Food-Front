@@ -56,7 +56,7 @@
 }
 
 .margin-auto {
-  margin: 0 0 0 auto;
+  margin: 0 3rem 0 auto;
 }
 
 .actus {
@@ -89,6 +89,13 @@
 @media (max-width: 1090px) {
   .homepage__imageContainer {
     padding: 0 8.3rem;
+  }
+  .presentation {
+    margin: 0 1rem;
+    flex-direction: column-reverse;
+  }
+  .margin-auto {
+    margin: 0 0 5rem;
   }
 }
 
@@ -140,6 +147,12 @@
 @media (max-width: 555px) {
   .homepage__title {
       font-size: 2.2rem;
+  }
+  .presentation {
+    margin: 0;
+  }
+  .ui.medium.image {
+    width: 70%;
   }
 }
 
