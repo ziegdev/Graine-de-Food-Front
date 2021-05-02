@@ -179,6 +179,12 @@
   .ui.medium.image {
     width: 70%;
   }
+  .ui.input {
+    flex-direction: column;
+  }
+  .input__newsletter {
+    margin: 1rem auto 5rem;
+  }
 }
 
 @media (max-width: 400px) {
