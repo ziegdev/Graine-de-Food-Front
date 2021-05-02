@@ -6,8 +6,9 @@ import exportFromJSON from 'export-from-json'
 const Options = ({ usersData }) => {
 
 const data =[]
-usersData.map((user) => ( data.push(user)))
-
+const userWithoutPassword = usersData.map((user) => ({...user, password: "***"}))
+userWithoutPassword.map((user) => ( data.push(user)))
+console.log(userWithoutPassword)
 const fileName = 'download'
 const exportType = 'csv'
 
