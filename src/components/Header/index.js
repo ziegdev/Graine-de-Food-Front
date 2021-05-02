@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <MediaContextProvider>
-              <Media at="desktop_tablet">
+              <Media greaterThanOrEqual="desktop_tablet">
                 <HeaderMenu />
               </Media>
               <Media at="mobile">
