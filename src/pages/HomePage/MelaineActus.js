@@ -18,7 +18,7 @@ const MelaineActus = () => (
         <Image src='https://grainedemagie.com/wp-content/uploads/2020/11/IMG_9927.jpg' wrapped ui={false} as='a' href='https://grainedemagie.com/' target='_blank' className="card-image--fixed-height" />
         <Card.Content>
           <Card.Header as='a' href='https://grainedemagie.com/' target='_blank'> 
-Recette : Moelleux au chocolat côte d'or</Card.Header>
+            Recette : Moelleux au chocolat côte d'or</Card.Header>
           <Card.Description>
               Bonjour tout le monde ! J'espère que vous allez bien. Je reviens aujourd'hui avec une nouvelle recette, 100% gourmande : un moelleux au chocolat côte d'or… Le principe est le même que celui au Nutella que vous pouvez retrouver ici mais avec du chocolat côte d’or. […]
           </Card.Description>

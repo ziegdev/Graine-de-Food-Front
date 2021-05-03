@@ -9,18 +9,12 @@ const MelaineIntro = () => (
     <Container text>
       <Header as='h2'>Un service proposé par Graine de Magie</Header>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+        Bienvenue sur le site Graine de Food ! <br/><br/>Une petite présentation s’impose :
+Moi c’est Mélaine j’ai 25 ans et je vis à Paris. Aujourd’hui blogueuse du site Graine de Magie à plein temps bienvenue dans mon univers. 
+<br/><br/>Grande Gourmande, j'ai décidé de créer le site Graine de Food pour vous proposer chaque mois directement chez vous un savoureux coffret gourmand surprise.
+<br/><br/>Cette box a pour but de promouvoir les produits Made in France et la richesse de notre beau patrimoine culinaire ! 
+J'ai à coeur de vous faire découvrir, chaque mois,  des produits de qualité issus de producteurs français que j'ai moi-même selectionné.
+<br/><br/>J’espère que ce concept vous plaira, je vous dis à très vite !
       </p>
     </Container>
   </div>

@@ -56,11 +56,11 @@ const ConceptPage = () => {
                     </div>
                     <div className="conceptPage__main__content__right">
                         <h3 className="conceptPage__main__content__right__title">
-                            Produits MADE IN FRANCE
+                            Engagés pour l'artisanat français !
                         </h3>
                         <p className="conceptPage__main__content__right__content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam praesentium sunt veritatis unde a? Quasi dolor explicabo repellat in vero earum. Fugit quae praesentium qui soluta unde eum consequuntur quod?
-                            Officiis, assumenda reprehenderit? Hic, totam, eligendi omnis minima cum necessitatibus, error aperiam ducimus magni eaque provident sint quasi aspernatur doloribus ratione esse atque est voluptate saepe? Iure iste temporibus repellat!
+                             Notre mission : permettre à chaque artisan, qui produit en France à partir de matières et ingrédients nobles et respectueux de l’environnement, de conquérir de nouveaux clients et de vivre correctement de son travail.
+                            C'est pourquoi nous sélectionnons tous les mois des produits de qualité Made In France !
                         </p>
                         <button className="conceptPage__main__content__right__button">
                             Voir la box du mois précédent

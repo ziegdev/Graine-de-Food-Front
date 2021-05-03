@@ -1,10 +1,7 @@
 import React from 'react';
 import { Grid, Image, Container, Header } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import concept1 from '/src/assets/images/IllustrationsConcept/pexels-pixabay-207247 (1).jpg';
 import concept2 from 'src/assets/images/IllustrationsHomepage/pexels-tima-miroshnichenko-6508773.jpg';
-import concept3 from '/src/assets/images/IllustrationsConcept/pexels-adonyi-gábor-1407857.jpg';
-import concept4 from '/src/assets/images/IllustrationsConcept/pexels-norma-mortenson-4393655.jpg';
 import './styles.scss';
 
 const Content = () => (
@@ -12,46 +9,32 @@ const Content = () => (
   <section className='concept-container'>
     <Grid verticalAlign='middle' stackable>
       <Grid.Column only='computer' width={6}>
-        <Image src={concept1} className='concept-image align-right' />
+        <Image src='https://cdn.pixabay.com/photo/2017/06/22/20/14/salmon-2432339__340.jpg' className='concept-image align-right' />
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
         <Image src={concept1} className='concept-image--mobile' />
       </Grid.Column>
       <Grid.Column only='computer' width={10}>
         <Container text>
-          <Header as='h2'>Misez sur le local</Header>
+          <Header as='h2'>Surprises et découvertes gourmandes</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Chaque mois, pendant toute la durée de votre abonnement, le meilleur de la gastronomie locale 
+            chez vous !Et si en plus le coffret gourmand était élégant, 100% biodégradable et que les produits 
+            qui le composent sont de véritables pépites de petits artisans du terroir, que vous ne trouverez pas 
+            en supermarché ? Graine de Food, c'est l'occasion de découvrir ou de redécouvrir 
+            chaque mois un terroir français différent à travers une sélection de produits d’épicerie fine.
           </p>
         </Container>
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
         <Container text>
-          <Header as='h2'>Misez sur le local</Header>
+          <Header as='h2'>Surprises et découvertes gourmandes</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Chaque mois, pendant toute la durée de votre abonnement, le meilleur de la gastronomie locale 
+            chez vous !Et si en plus le coffret gourmand était élégant, 100% biodégradable et que les produits 
+            qui le composent sont de véritables pépites de petits artisans du terroir, que vous ne trouverez pas 
+            en supermarché ? Graine de Food, c'est l'occasion de découvrir ou de redécouvrir 
+            chaque mois un terroir français différent à travers une sélection de produits d’épicerie fine.
           </p>
         </Container>
       </Grid.Column>
@@ -61,39 +44,25 @@ const Content = () => (
     <Grid verticalAlign='middle' stackable  className="reversed">
       <Grid.Column only='computer' width={10}>
         <Container text>
-          <Header as='h2' >Le choix des producteurs</Header>
+          <Header as='h2' > Engagés pour l'artisanat français !</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Notre mission?  Permettre à chaque artisan, qui produit en France à partir de matières et 
+            ingrédients nobles et respectueux de l’environnement, de conquérir de nouveaux clients et de vivre 
+            correctement de son travail. C'est pourquoi nous sélectionnons tous les mois des produits de qualité 
+            Made In France ! Parce que le terroir peut s’explorer par les papilles, Graine de Food vous propose 
+            chaque mois un voyage à travers les jolies régions de France
           </p>
         </Container>
       </Grid.Column>
  <Grid.Column only='mobile tablet' width={16}>
         <Container text>
-          <Header as='h2' >Le choix des producteurs</Header>
+          <Header as='h2' >Engagés pour l'artisanat français !</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+             Notre mission?  Permettre à chaque artisan, qui produit en France à partir de matières et 
+            ingrédients nobles et respectueux de l’environnement, de conquérir de nouveaux clients et de vivre 
+            correctement de son travail. C'est pourquoi nous sélectionnons tous les mois des produits de qualité 
+            Made In France ! Parce que le terroir peut s’explorer par les papilles, Graine de Food vous propose 
+            chaque mois un voyage à travers les jolies régions de France
           </p>
         </Container>
       </Grid.Column>
@@ -109,46 +78,32 @@ const Content = () => (
   <section className='concept-container'>
     <Grid verticalAlign='middle' stackable>
       <Grid.Column only='computer' width={6}>
-        <Image src={concept3} className='concept-image align-right' />
+        <Image src='https://cdn.pixabay.com/photo/2017/07/01/18/18/macaron-2462247__340.jpg' className='concept-image align-right' />
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
-        <Image src={concept3} className='concept-image--mobile' />
+        <Image src='https://cdn.pixabay.com/photo/2017/07/01/18/18/macaron-2462247__340.jpg' className='concept-image--mobile' />
       </Grid.Column>
       <Grid.Column  only='computer' width={10}>
         <Container text>
-          <Header as='h2'>Des produits de qualité</Header>
+          <Header as='h2'>Sans engagement, c'est encore  mieux</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Chez Graine de Food pas d'engagement, pas de surprise. Nous proposons 3 formules simples : 
+            1 mois, 3 mois ou 6 mois. C'est vous qui choisissez ! Après avoir passé votre commande, 
+            vous recevrez à la fin du mois suivant votre première box .
+            Vous souhaitez offrir cet box ? Pas de problème, nous livrons partout en France, vous pouvez choisir 
+            une adresse de livraison différente de votre adresse de facturation.
           </p>
         </Container>
       </Grid.Column>
     <Grid.Column  only='mobile tablet' width={16}>
         <Container text>
-          <Header as='h2'>Des produits de qualité</Header>
+          <Header as='h2'>Sans engagement, c'est encore  mieux</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Chez Graine de Food pas d'engagement, pas de surprise. Nous proposons 3 formules simples : 
+            1 mois, 3 mois ou 6 mois. C'est vous qui choisissez ! Après avoir passé votre commande, 
+            vous recevrez à la fin du mois suivant votre première box .
+            Vous souhaitez offrir cet box ? Pas de problème, nous livrons partout en France, vous pouvez choisir 
+            une adresse de livraison différente de votre adresse de facturation.
           </p>
         </Container>
       </Grid.Column>
@@ -158,47 +113,31 @@ const Content = () => (
     <Grid verticalAlign='middle' stackable  className="reversed">
       <Grid.Column only='computer' width={10}>
         <Container text>
-          <Header as='h2' >Des surprises livrées chaque début de mois</Header>
+          <Header as='h2' >Vegan ? We ❤️ you </Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Vous suivez un régime végétarien ? Vous avez des convictions concernant la cause animale ? 
+            Chez Graine de Food, nous sommes ravis de pouvoir vous proposer une box personnalisée 100 % Vegan. 
+            Si une de box contennait de la viande, nous remplacerons alors ce produit par un équivalent sans viande ou un autre produit de notre selection. 
+            Pensez à cocher la case Vegan lors de votre inscription ! 
           </p>
         </Container>
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
         <Container text>
-          <Header as='h2' >Des surprises livrées chaque début de mois</Header>
+          <Header as='h2' >Vegan ? We ❤️ you</Header>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            Vous suivez un régime végétarien ? Vous avez des convictions concernant la cause animale ? 
+            Chez Graine de Food, nous sommes ravis de pouvoir vous proposer une box personnalisée 100 % Vegan. 
+            Si une de box contennait de la viande, nous remplacerons alors ce produit par un équivalent sans viande ou un autre produit de notre selection. 
+            Pensez à cocher la case Vegan lors de votre inscription ! 
           </p>
         </Container>
       </Grid.Column>
       <Grid.Column only='computer' width={6}>
-        <Image src={concept4} className='concept-image align-left' />
+        <Image src='https://cdn.pixabay.com/photo/2016/09/12/08/22/breakfast-1663295__340.jpg' className='concept-image align-left' />
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
-        <Image src={concept4} className='concept-image--mobile' />
+        <Image src='https://cdn.pixabay.com/photo/2016/09/12/08/22/breakfast-1663295__340.jpg' className='concept-image--mobile' />
       </Grid.Column>
     </Grid>
   </section>
