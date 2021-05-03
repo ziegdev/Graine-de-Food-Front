@@ -24,7 +24,7 @@ const DeleteUser = ({logout, id }) => {
       onOpen={() => setOpen(true)}
       open={open}
       size='small'
-      trigger={<Button>Oubliez-Moi </Button>}
+      trigger={<button>Oubliez-Moi </button>}
     >
       <Header icon>
         <Icon name='archive' />

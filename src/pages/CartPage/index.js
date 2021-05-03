@@ -7,7 +7,8 @@ import CartResume from 'src/containers/CartResume';
 import DeliveryFormConfirm from 'src/containers/DeliveryFormConfirm';
 import NavFormule from 'src/pages/CartPage/NavFormule';
 import Checkout from 'src/pages/CartPage/StripePay';
-import ModalTest from 'src/pages/CartPage/ModalTest';
+// import ModalTest from 'src/pages/CartPage/ModalTest';
+import ModalSem from 'src/pages/CartPage/ModalSem';
 import { StripeProvider, Elements, Stripe } from 'react-stripe-elements';
 import pjson from '../../../package.json';
 
@@ -30,20 +31,21 @@ const CartPage = () => {
       <DeliveryFormConfirm />
       <Checkbox className="checkboxCGV" label="J'ai lu et j'accepte les conditions générales de vente" />
       <div className="cartpage__button"> 
-<StripeProvider apiKey='pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE'>
-    <Elements>
-      <ModalTest />
-    </Elements>
- </StripeProvider>
+        <StripeProvider apiKey='pk_test_51IkqSgJg8u3w3UyQntWZjxo4SdYN3JED4UhzDX0bedWSxBBpPIET2xBUtrMcfcOx1fpg5ZOJxv04gZ4UjOPJZaym00oQYQhsdE'>
+            <Elements>
+              {/* <ModalTest /> */}
+              <ModalSem />
+            </Elements>
+        </StripeProvider>
 
 
-    <Link to="/abonnement/commande-validee">         
-    <Button icon labelPosition='right'>
-        Paiement
+      {/* <Link to="/abonnement/commande-validee">         
+        <Button icon labelPosition='right'>
+          Paiement
         </Button> 
-</Link>
+      </Link> */}
      </div>
-</div>
+  </div>
 
   );
 }
