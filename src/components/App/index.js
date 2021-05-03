@@ -34,7 +34,7 @@ import CGV from 'src/pages/CGV';
 import ContactPage from 'src/pages/ContactPage';
 import AdminOrderPage from 'src/pages/AdminOrderPage';
 import AdminPromoPage from 'src/containers/AdminPromoPage';
-import api from 'src/api';
+import DreamTeam from 'src/pages/DreamTeam';
 
 
 // == Composant
@@ -64,6 +64,9 @@ const App = ({logged, role}) => {
             <Subscribe />
         </Route>
 
+        <Route path="/dreamteam" >
+            <DreamTeam />
+        </Route>
         <Route path="/mentions-legales" >
             <LegalNotice />
         </Route>
