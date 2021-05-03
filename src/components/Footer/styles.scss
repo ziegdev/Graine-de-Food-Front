@@ -4,6 +4,22 @@
     align-items: center;
 
     .footer__social, .footer__menu {
-        margin: 0 2rem;
+      margin: 0 2rem;
     }
+}
+
+/* Responsive Design*/
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer .footer__menu, .footer .footer__social {
+    margin: 0 2rem 2rem;
+  }
+
+  .Legal_Text {
+    padding: 0 2rem;
+  }
 }

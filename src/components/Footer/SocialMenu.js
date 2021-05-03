@@ -1,5 +1,6 @@
-import React from 'react'
-import { Image, List, Icon } from 'semantic-ui-react'
+import React from 'react';
+import { List, Icon } from 'semantic-ui-react';
+import './styles.scss';
 
 const SocialMenu = () => (
     <List horizontal className="footer__social">

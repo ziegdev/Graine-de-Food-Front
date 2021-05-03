@@ -5,8 +5,8 @@ const TestPayement = ({selectedSubPrice, selectedSubMonth, finalPrice}) => {
     const [showItem, setShowItem] = useState(false)
     return (
       <>
-        <h1>Abonnement GrainedeFood - {selectedSubMonth}</h1>
-        {showItem ? <StripeContainer/> : <> <h3>{finalPrice}€</h3> 
+        <h2>Box GrainedeFood - {selectedSubMonth}</h2>
+        {showItem ? <StripeContainer/> : <> <p>montant total TTC à régler : <span>{finalPrice}€</span></p> 
         <button onClick={() => setShowItem(true)}>Payer</button></>}
       </>
     );

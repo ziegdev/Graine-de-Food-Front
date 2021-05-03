@@ -2,8 +2,8 @@ import React from 'react';
 import './styles.scss';
 
 const ImageIntro = () => (
-  <div className="homepage__imageContainer">
-    <h1 className="homepage__title">LE CONCEPT DE GRAINE DE FOOD</h1>
+  <div className="concept__imageContainer">
+    <h1 className="concept__title">LE CONCEPT DE GRAINE DE FOOD</h1>
   </div>
 );
 

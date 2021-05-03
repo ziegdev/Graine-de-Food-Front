@@ -15,7 +15,7 @@ const [ usersData, setUsers ] = useState([])
       .catch((error) => console.error(error))
       
   },[]);
-console.log(usersData)
+
   return (
   <div className='container'>
     <AdminMenu />
