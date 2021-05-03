@@ -46,7 +46,7 @@ const panes = [
 ]
 
 return (
-  <Tab menu={{ secondary: true, pointing: true }} panes={panes} onClick={setSubMonths} />
+  <Tab menu={{ secondary: true, pointing: true }} panes={panes} onClick={setSubMonths} className="navformule" />
 )
 
 }

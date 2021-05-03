@@ -107,7 +107,8 @@ const Signup = ({setEmailSignup, setPasswordSignup, setPasswordConfirmSignup, se
                     <Input
                         className="loginpage__signup__input__content"
                         placeholder='Code Postal'
-                        type="number"
+                        type="text"
+                        pattern="[0-9]{5}" 
                         value={deliveryPostCodeSignup}
                         onChange={(e) => setDeliveryPostCodeSignup(e.target.value)}
                     />

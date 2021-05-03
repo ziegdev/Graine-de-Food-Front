@@ -5,9 +5,26 @@
 
     .footer__social, .footer__menu {
       margin: 0 2rem;
+
+      i.icon:before {
+        color:#80003F;
+      }
     }
 }
+  .ui.secondary.pointing.menu .item:hover {
+    font-weight: 600;
+    color:#80003F;
+  }
 
+  .ui.secondary.menu .active.item {
+    font-weight: 600;
+    color:#80003F;
+  }
+
+
+.current_year {
+  color: black;
+}
 /* Responsive Design*/
 
 @media (max-width: 900px) {
@@ -23,3 +40,4 @@
     padding: 0 2rem;
   }
 }
+

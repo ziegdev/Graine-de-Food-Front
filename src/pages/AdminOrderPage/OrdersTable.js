@@ -14,7 +14,7 @@ const OrdersTable = ({ usersData }) => {
         <Table.HeaderCell>Code Postal</Table.HeaderCell>
         <Table.HeaderCell>Ville</Table.HeaderCell>
         <Table.HeaderCell>Vegan</Table.HeaderCell>
-        <Table.HeaderCell>Date d'abonnement</Table.HeaderCell>
+        <Table.HeaderCell>Box restantes à envoyer</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
 
@@ -29,7 +29,7 @@ const OrdersTable = ({ usersData }) => {
       <Table.Cell>{user.delivery_postcode}</Table.Cell>
       <Table.Cell>{user.delivery_city}</Table.Cell>
       <Table.Cell>{user.vegan ? "Oui" : "Non" }</Table.Cell>
-      <Table.Cell>18/04/2021</Table.Cell>
+      <Table.Cell>{user.points}</Table.Cell>
     </Table.Row>
     ))}
        </Table.Body>

@@ -17,3 +17,15 @@
 .padding-top {
   padding-top: 3rem;
 }
+
+.ui.secondary.pointing.menu {
+  border-bottom: none;
+}
+
+.ui.secondary.pointing.menu .active.item {
+  border-color: white;
+}
+
+.ui.secondary.menu .active.item {
+background: none;
+}

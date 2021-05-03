@@ -12,7 +12,7 @@ const Content = () => (
         <Image src='https://cdn.pixabay.com/photo/2017/06/22/20/14/salmon-2432339__340.jpg' className='concept-image align-right' />
       </Grid.Column>
       <Grid.Column only='mobile tablet' width={16}>
-        <Image src={concept1} className='concept-image--mobile' />
+        <Image src='https://cdn.pixabay.com/photo/2017/06/22/20/14/salmon-2432339__340.jpg' className='concept-image--mobile' />
       </Grid.Column>
       <Grid.Column only='computer' width={10}>
         <Container text>

@@ -49,7 +49,7 @@ const Signin = ({setEmailSignin, setPasswordSignin, submitLogin, resetField, ema
                     >
                         Se connecter
                     </button>
-                    <span>Mot de passe oublié ?</span>
+                    <span className="loginpage__password">Mot de passe oublié ?</span>
                 </form>
             </div>
         </div>

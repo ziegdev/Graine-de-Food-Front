@@ -30,12 +30,12 @@ const addPromoCode = (e) => {
   };
 
 
-const newPourcent = parseInt(pourcent, 10)
-const newPrice = parseInt(selectedSubPrice, 10)
-const TVA = Number(((newPrice * 20) / 100).toFixed(2))
+const newPourcent = Number(pourcent)
+const newPrice = Number(selectedSubPrice)
+const TVA = Number.parseFloat(((newPrice / 120) *20 )).toFixed(2)
 //const finalPrice =(newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)
-setFinalPrice(Number((newPrice * ((100-newPourcent)/100) + TVA).toFixed(2)))
-
+setFinalPrice(Number.parseFloat(newPrice * ((100-newPourcent)/100)).toFixed(2))
+console.log(newPrice)
 
 
 return(

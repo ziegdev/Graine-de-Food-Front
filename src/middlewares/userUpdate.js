@@ -21,6 +21,7 @@ export default (store) => (next) => (action) => {
            delivery_city: deliveryCity,
         }).catch((err)=> console.log('error: ', err)
         )
+          
  return next(action);
 }
 default:
